@@ -155,19 +155,7 @@ final class BrowserModel {
         rightActive = isRight; saveSession()
     }
     func closeTab(_ id: UUID, isRight: Bool = false) {
-        var paneTabs = isRight ? rightTabs : tabs
-        guard let index = paneTabs.firstIndex(where: { $0.id == id }) else { return }
-        guard paneTabs.count > 1 else {
-            if isRight { split = false; rightActive = false; saveSession() }
-            else { NSApp.windows.first { $0.identifier?.rawValue == "MyFolds.main" }?.performClose(nil) }
-            return
-        }
-        paneTabs[index].cancelWork(); paneTabs.remove(at: index)
-        let selection = isRight ? selectedRightTabID : selectedTabID
-        let next = selection == id ? paneTabs[min(index, paneTabs.count - 1)].id : selection
-        if isRight { rightTabs = paneTabs; selectedRightTabID = next }
-        else { tabs = paneTabs; selectedTabID = next }
-        rightActive = isRight; saveSession()
+        closeTabs([id], isRight: isRight)
     }
     func closeCurrentTabOrWindow() {
         if fileWindowIsKey { closeTab(active.id, isRight: split && rightActive) }

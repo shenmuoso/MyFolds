@@ -18,7 +18,7 @@ struct TabSelectionBackground: View, Animatable {
     }
     var body: some View {
         RoundedRectangle(cornerRadius: 8).fill(accent)
-            .frame(width: 190, height: BrowserChrome.controlHeight).offset(x: position)
+            .frame(width: BrowserChrome.tabWidth, height: BrowserChrome.controlHeight).offset(x: position)
             .allowsHitTesting(false)
     }
 }

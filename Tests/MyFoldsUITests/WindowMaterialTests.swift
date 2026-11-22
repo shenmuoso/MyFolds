@@ -11,6 +11,7 @@ struct WindowMaterialTests {
         let application = NSApplication.shared, old = NSApplication.shared.appearance
         defer { application.appearance = old }
         let controller = MaterialContentController(content: WindowControls().frame(width: 70, height: 22))
+        controller.surface.windowID = "MyFolds.test.controls"
         let window = NSWindow(contentViewController: controller)
         window.styleMask = [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView]
         window.isReleasedWhenClosed = false; window.setContentSize(NSSize(width: 240, height: 160))
