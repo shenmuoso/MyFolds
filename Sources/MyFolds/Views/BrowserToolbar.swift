@@ -10,7 +10,7 @@ struct BrowserToolbar: View {
                 WindowControls().frame(width: 70, height: 22)
                 ToolbarSymbol("显示侧栏", symbol: "sidebar.left") { model.sidebarVisible = true }
             }
-            HStack(spacing: 0) {
+            HStack(spacing: 8) {
                 ToolbarSymbol("后退", symbol: "chevron.left", width: 27) { model.active.back(hidden: preferences.showHidden) }
                     .disabled(model.active.history.isEmpty && model.active.archive == nil)
                 if !model.active.future.isEmpty {

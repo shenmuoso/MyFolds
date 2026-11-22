@@ -4,10 +4,12 @@ import MyFoldsCore
 struct PathBar: View {
     @Environment(\.myfoldsAccentColor) private var accent
     @Environment(\.myfoldsSubtleAccent) private var subtleAccent
+    @Environment(\.myfoldsAccentInk) private var focusColor
     @Bindable var model: BrowserModel
     @Bindable var session: FolderSession
     let isRight: Bool
     @Environment(\.myfoldsReduceMotion) private var reduced
+    @State private var fieldFocused = false
     private var active: Bool { !model.split || model.rightActive == isRight }
     var body: some View {
         @Bindable var editor = session.pathEditor
@@ -18,7 +20,8 @@ struct PathBar: View {
                 if editor.editing {
                     NativePathField(text: $editor.draft, submit: submit, cancel: editor.cancel,
                                     changed: { editor.typed(relativeTo: session.directory, showHidden: model.preferences.showHidden) },
-                                    step: editor.step, complete: { editor.complete(relativeTo: session.directory, showHidden: model.preferences.showHidden) })
+                                    step: editor.step, complete: { editor.complete(relativeTo: session.directory, showHidden: model.preferences.showHidden) },
+                                    focusChanged: { fieldFocused = $0 })
                         .frame(height: 24)
                 } else {
                     Button {
@@ -37,6 +40,13 @@ struct PathBar: View {
             }.padding(.horizontal, 10).frame(height: BrowserChrome.controlHeight)
                 .foregroundStyle(BrowserChrome.pathText)
                 .background(subtleAccent, in: .rect(cornerRadius: 8))
+                .overlay {
+                    RoundedRectangle(cornerRadius: 8)
+                        .strokeBorder(focusColor.opacity(editor.editing && fieldFocused ? 0.85 : 0), lineWidth: 2)
+                        .allowsHitTesting(false)
+                }
+                .animation(BrowserMotion.feedback(reduced), value: fieldFocused && editor.editing)
+                .onChange(of: editor.editing) { if !editor.editing { fieldFocused = false } }
                 .contentShape(.rect)
                 .onTapGesture { model.rightActive = isRight; if !editor.editing { editor.begin(session.directory) } }
                 .overlay(alignment: .topLeading) {
