@@ -1,0 +1,48 @@
+[
+  {
+    "file": "mountain.jpg",
+    "source": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1400&q=85&fit=crop",
+    "origin": "Unsplash landscape photo, source photo-1464822759023-fed622ff2c3b; illustrative file preview, not user data.",
+    "bytes": 358264
+  },
+  {
+    "file": "coast.jpg",
+    "source": "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?w=1000&q=85&fit=crop",
+    "origin": "Unsplash landscape photo, source photo-1473116763249-2faaef81ccda; illustrative file preview.",
+    "bytes": 105545
+  },
+  {
+    "file": "forest.jpg",
+    "source": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1000&q=85&fit=crop",
+    "origin": "Unsplash forest photo, source photo-1441974231531-c6227db76b6e; illustrative file preview.",
+    "bytes": 239524
+  },
+  {
+    "file": "flower.mp4",
+    "source": "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+    "origin": "MDN interactive examples CC0 flower video; illustrative local video preview.",
+    "bytes": 1128375
+  },
+  {
+    "file": "flower.jpg",
+    "source": "flower.mp4 at 1 second",
+    "origin": "Derived preview frame from the MDN CC0 demonstration video.",
+    "bytes": 69971
+  },
+  {
+    "file": "symbols/*.png",
+    "origin": "Apple SF Symbols, rendered via AppKit NSImage(systemSymbolName:) on installed macOS for a macOS UI design reference. Native implementation should use system APIs."
+  },
+  {
+    "file": "*-native.png",
+    "origin": "System file type icons returned by macOS NSWorkspace.icon(for:). Rendered for the MyFolds macOS design prototype, subject to current system file associations."
+  },
+  {
+    "file": "myfolds.svg",
+    "origin": "Original geometric folder mark authored for the MyFolds design proposal."
+  },
+  {
+    "file": "wallpaper.svg",
+    "origin": "Original warm champagne, ivory and muted terracotta geometric desktop backdrop authored for MyFolds v0.4; no blue presentation background, not an Apple wallpaper."
+  }
+]

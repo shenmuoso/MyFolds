@@ -1,0 +1,1506 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-20T14:16:51+00:00",
+  "title": "Design System: MyFolds",
+  "extensions": {
+    "colorMeta": {
+      "accent": {
+        "role": "primary",
+        "displayName": "系统操作蓝",
+        "tonalRamp": [
+          "oklch(0.150 0.1017 256.64)",
+          "oklch(0.260 0.1486 256.64)",
+          "oklch(0.380 0.1800 256.64)",
+          "oklch(0.500 0.1916 256.64)",
+          "oklch(0.620 0.1833 256.64)",
+          "oklch(0.740 0.1553 256.64)",
+          "oklch(0.850 0.1117 256.64)",
+          "oklch(0.950 0.0530 256.64)"
+        ]
+      },
+      "accent-hover": {
+        "role": "primary",
+        "displayName": "操作蓝悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0951 257.07)",
+          "oklch(0.260 0.1389 257.07)",
+          "oklch(0.380 0.1682 257.07)",
+          "oklch(0.500 0.1790 257.07)",
+          "oklch(0.620 0.1713 257.07)",
+          "oklch(0.740 0.1451 257.07)",
+          "oklch(0.850 0.1044 257.07)",
+          "oklch(0.950 0.0496 257.07)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "暖黑正文与工具",
+        "tonalRamp": [
+          "oklch(0.150 0.0042 84.59)",
+          "oklch(0.260 0.0061 84.59)",
+          "oklch(0.380 0.0074 84.59)",
+          "oklch(0.500 0.0078 84.59)",
+          "oklch(0.620 0.0075 84.59)",
+          "oklch(0.740 0.0064 84.59)",
+          "oklch(0.850 0.0046 84.59)",
+          "oklch(0.950 0.0022 84.59)"
+        ]
+      },
+      "secondary": {
+        "role": "neutral",
+        "displayName": "中性辅助文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0069 76.48)",
+          "oklch(0.260 0.0101 76.48)",
+          "oklch(0.380 0.0123 76.48)",
+          "oklch(0.500 0.0131 76.48)",
+          "oklch(0.620 0.0125 76.48)",
+          "oklch(0.740 0.0106 76.48)",
+          "oklch(0.850 0.0076 76.48)",
+          "oklch(0.950 0.0036 76.48)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "实体表面",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "surface-soft": {
+        "role": "neutral",
+        "displayName": "柔和实体表面",
+        "tonalRamp": [
+          "oklch(0.150 0.0014 106.45)",
+          "oklch(0.260 0.0021 106.45)",
+          "oklch(0.380 0.0025 106.45)",
+          "oklch(0.500 0.0026 106.45)",
+          "oklch(0.620 0.0025 106.45)",
+          "oklch(0.740 0.0021 106.45)",
+          "oklch(0.850 0.0015 106.45)",
+          "oklch(0.950 0.0007 106.45)"
+        ]
+      },
+      "content": {
+        "role": "neutral",
+        "displayName": "半透明暖雾灰内容面",
+        "tonalRamp": [
+          "oklch(0.150 0.0022 91.45)",
+          "oklch(0.260 0.0032 91.45)",
+          "oklch(0.380 0.0039 91.45)",
+          "oklch(0.500 0.0041 91.45)",
+          "oklch(0.620 0.0040 91.45)",
+          "oklch(0.740 0.0034 91.45)",
+          "oklch(0.850 0.0024 91.45)",
+          "oklch(0.950 0.0011 91.45)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "结构边线",
+        "tonalRamp": [
+          "oklch(0.150 0.0029 106.78)",
+          "oklch(0.260 0.0043 106.78)",
+          "oklch(0.380 0.0052 106.78)",
+          "oklch(0.500 0.0055 106.78)",
+          "oklch(0.620 0.0053 106.78)",
+          "oklch(0.740 0.0045 106.78)",
+          "oklch(0.850 0.0032 106.78)",
+          "oklch(0.950 0.0015 106.78)"
+        ]
+      },
+      "hover": {
+        "role": "neutral",
+        "displayName": "中性悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0030 106.83)",
+          "oklch(0.260 0.0044 106.83)",
+          "oklch(0.380 0.0053 106.83)",
+          "oklch(0.500 0.0056 106.83)",
+          "oklch(0.620 0.0054 106.83)",
+          "oklch(0.740 0.0046 106.83)",
+          "oklch(0.850 0.0033 106.83)",
+          "oklch(0.950 0.0016 106.83)"
+        ]
+      },
+      "selection": {
+        "role": "primary",
+        "displayName": "辅助选择底",
+        "tonalRamp": [
+          "oklch(0.150 0.0153 259.59)",
+          "oklch(0.260 0.0223 259.59)",
+          "oklch(0.380 0.0270 259.59)",
+          "oklch(0.500 0.0288 259.59)",
+          "oklch(0.620 0.0275 259.59)",
+          "oklch(0.740 0.0233 259.59)",
+          "oklch(0.850 0.0168 259.59)",
+          "oklch(0.950 0.0080 259.59)"
+        ]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "成功绿",
+        "tonalRamp": [
+          "oklch(0.150 0.0551 152.98)",
+          "oklch(0.260 0.0804 152.98)",
+          "oklch(0.380 0.0974 152.98)",
+          "oklch(0.500 0.1037 152.98)",
+          "oklch(0.620 0.0992 152.98)",
+          "oklch(0.740 0.0840 152.98)",
+          "oklch(0.850 0.0605 152.98)",
+          "oklch(0.950 0.0287 152.98)"
+        ]
+      },
+      "danger": {
+        "role": "secondary",
+        "displayName": "危险文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0839 24.24)",
+          "oklch(0.260 0.1226 24.24)",
+          "oklch(0.380 0.1484 24.24)",
+          "oklch(0.500 0.1580 24.24)",
+          "oklch(0.620 0.1512 24.24)",
+          "oklch(0.740 0.1280 24.24)",
+          "oklch(0.850 0.0921 24.24)",
+          "oklch(0.950 0.0437 24.24)"
+        ]
+      },
+      "warning": {
+        "role": "secondary",
+        "displayName": "警告文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0452 73.70)",
+          "oklch(0.260 0.0660 73.70)",
+          "oklch(0.380 0.0799 73.70)",
+          "oklch(0.500 0.0851 73.70)",
+          "oklch(0.620 0.0814 73.70)",
+          "oklch(0.740 0.0689 73.70)",
+          "oklch(0.850 0.0496 73.70)",
+          "oklch(0.950 0.0236 73.70)"
+        ]
+      },
+      "window-fill": {
+        "role": "neutral",
+        "displayName": "共享窗口玻璃",
+        "tonalRamp": [
+          "oklch(0.150 0.0052 87.47)",
+          "oklch(0.260 0.0076 87.47)",
+          "oklch(0.380 0.0092 87.47)",
+          "oklch(0.500 0.0098 87.47)",
+          "oklch(0.620 0.0093 87.47)",
+          "oklch(0.740 0.0079 87.47)",
+          "oklch(0.850 0.0057 87.47)",
+          "oklch(0.950 0.0027 87.47)"
+        ]
+      },
+      "inspector-fill": {
+        "role": "neutral",
+        "displayName": "检查器薄覆盖",
+        "tonalRamp": [
+          "oklch(0.150 0.0043 91.48)",
+          "oklch(0.260 0.0063 91.48)",
+          "oklch(0.380 0.0077 91.48)",
+          "oklch(0.500 0.0082 91.48)",
+          "oklch(0.620 0.0078 91.48)",
+          "oklch(0.740 0.0066 91.48)",
+          "oklch(0.850 0.0048 91.48)",
+          "oklch(0.950 0.0023 91.48)"
+        ]
+      },
+      "control-fill": {
+        "role": "neutral",
+        "displayName": "轻量控件底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "control-selected": {
+        "role": "neutral",
+        "displayName": "选中控件底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "menu-fill": {
+        "role": "neutral",
+        "displayName": "密集文字浮层",
+        "tonalRamp": [
+          "oklch(0.150 0.0022 91.45)",
+          "oklch(0.260 0.0032 91.45)",
+          "oklch(0.380 0.0039 91.45)",
+          "oklch(0.500 0.0041 91.45)",
+          "oklch(0.620 0.0039 91.45)",
+          "oklch(0.740 0.0033 91.45)",
+          "oklch(0.850 0.0024 91.45)",
+          "oklch(0.950 0.0011 91.45)"
+        ]
+      },
+      "glass-edge": {
+        "role": "neutral",
+        "displayName": "窗口内亮边",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-accent": {
+        "role": "primary",
+        "displayName": "深色 · 系统操作蓝",
+        "tonalRamp": [
+          "oklch(0.150 0.0994 256.64)",
+          "oklch(0.260 0.1452 256.64)",
+          "oklch(0.380 0.1758 256.64)",
+          "oklch(0.500 0.1871 256.64)",
+          "oklch(0.620 0.1790 256.64)",
+          "oklch(0.740 0.1516 256.64)",
+          "oklch(0.850 0.1091 256.64)",
+          "oklch(0.950 0.0518 256.64)"
+        ]
+      },
+      "dark-accent-hover": {
+        "role": "primary",
+        "displayName": "深色 · 操作蓝悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.1045 256.19)",
+          "oklch(0.260 0.1527 256.19)",
+          "oklch(0.380 0.1849 256.19)",
+          "oklch(0.500 0.1968 256.19)",
+          "oklch(0.620 0.1883 256.19)",
+          "oklch(0.740 0.1595 256.19)",
+          "oklch(0.850 0.1148 256.19)",
+          "oklch(0.950 0.0545 256.19)"
+        ]
+      },
+      "dark-ink": {
+        "role": "neutral",
+        "displayName": "深色 · 暖石墨正文",
+        "tonalRamp": [
+          "oklch(0.150 0.0035 106.53)",
+          "oklch(0.260 0.0052 106.53)",
+          "oklch(0.380 0.0062 106.53)",
+          "oklch(0.500 0.0066 106.53)",
+          "oklch(0.620 0.0064 106.53)",
+          "oklch(0.740 0.0054 106.53)",
+          "oklch(0.850 0.0039 106.53)",
+          "oklch(0.950 0.0018 106.53)"
+        ]
+      },
+      "dark-secondary": {
+        "role": "neutral",
+        "displayName": "深色 · 暖中性辅助文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0052 100.02)",
+          "oklch(0.260 0.0076 100.02)",
+          "oklch(0.380 0.0091 100.02)",
+          "oklch(0.500 0.0097 100.02)",
+          "oklch(0.620 0.0093 100.02)",
+          "oklch(0.740 0.0079 100.02)",
+          "oklch(0.850 0.0057 100.02)",
+          "oklch(0.950 0.0027 100.02)"
+        ]
+      },
+      "dark-surface": {
+        "role": "neutral",
+        "displayName": "深色 · 实体表面",
+        "tonalRamp": [
+          "oklch(0.150 0.0028 106.70)",
+          "oklch(0.260 0.0041 106.70)",
+          "oklch(0.380 0.0049 106.70)",
+          "oklch(0.500 0.0053 106.70)",
+          "oklch(0.620 0.0050 106.70)",
+          "oklch(0.740 0.0043 106.70)",
+          "oklch(0.850 0.0031 106.70)",
+          "oklch(0.950 0.0015 106.70)"
+        ]
+      },
+      "dark-surface-soft": {
+        "role": "neutral",
+        "displayName": "深色 · 柔和实体表面",
+        "tonalRamp": [
+          "oklch(0.150 0.0036 106.76)",
+          "oklch(0.260 0.0053 106.76)",
+          "oklch(0.380 0.0064 106.76)",
+          "oklch(0.500 0.0069 106.76)",
+          "oklch(0.620 0.0066 106.76)",
+          "oklch(0.740 0.0056 106.76)",
+          "oklch(0.850 0.0040 106.76)",
+          "oklch(0.950 0.0019 106.76)"
+        ]
+      },
+      "dark-content": {
+        "role": "neutral",
+        "displayName": "深色 · 半透明炭灰内容面",
+        "tonalRamp": [
+          "oklch(0.150 0.0029 106.78)",
+          "oklch(0.260 0.0043 106.78)",
+          "oklch(0.380 0.0052 106.78)",
+          "oklch(0.500 0.0055 106.78)",
+          "oklch(0.620 0.0053 106.78)",
+          "oklch(0.740 0.0045 106.78)",
+          "oklch(0.850 0.0032 106.78)",
+          "oklch(0.950 0.0015 106.78)"
+        ]
+      },
+      "dark-line": {
+        "role": "neutral",
+        "displayName": "深色 · 结构边线",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-hover": {
+        "role": "neutral",
+        "displayName": "深色 · 中性悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-selection": {
+        "role": "primary",
+        "displayName": "深色 · 辅助选择底",
+        "tonalRamp": [
+          "oklch(0.150 0.0379 253.91)",
+          "oklch(0.260 0.0553 253.91)",
+          "oklch(0.380 0.0670 253.91)",
+          "oklch(0.500 0.0713 253.91)",
+          "oklch(0.620 0.0682 253.91)",
+          "oklch(0.740 0.0578 253.91)",
+          "oklch(0.850 0.0416 253.91)",
+          "oklch(0.950 0.0197 253.91)"
+        ]
+      },
+      "dark-success": {
+        "role": "secondary",
+        "displayName": "深色 · 成功绿",
+        "tonalRamp": [
+          "oklch(0.150 0.0475 151.23)",
+          "oklch(0.260 0.0694 151.23)",
+          "oklch(0.380 0.0841 151.23)",
+          "oklch(0.500 0.0895 151.23)",
+          "oklch(0.620 0.0856 151.23)",
+          "oklch(0.740 0.0725 151.23)",
+          "oklch(0.850 0.0522 151.23)",
+          "oklch(0.950 0.0248 151.23)"
+        ]
+      },
+      "dark-danger": {
+        "role": "secondary",
+        "displayName": "深色 · 危险文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0613 20.14)",
+          "oklch(0.260 0.0896 20.14)",
+          "oklch(0.380 0.1085 20.14)",
+          "oklch(0.500 0.1155 20.14)",
+          "oklch(0.620 0.1105 20.14)",
+          "oklch(0.740 0.0936 20.14)",
+          "oklch(0.850 0.0673 20.14)",
+          "oklch(0.950 0.0320 20.14)"
+        ]
+      },
+      "dark-warning": {
+        "role": "secondary",
+        "displayName": "深色 · 警告文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0439 79.60)",
+          "oklch(0.260 0.0641 79.60)",
+          "oklch(0.380 0.0776 79.60)",
+          "oklch(0.500 0.0826 79.60)",
+          "oklch(0.620 0.0791 79.60)",
+          "oklch(0.740 0.0670 79.60)",
+          "oklch(0.850 0.0482 79.60)",
+          "oklch(0.950 0.0229 79.60)"
+        ]
+      },
+      "dark-window-fill": {
+        "role": "neutral",
+        "displayName": "深色 · 共享窗口玻璃",
+        "tonalRamp": [
+          "oklch(0.150 0.0039 106.92)",
+          "oklch(0.260 0.0057 106.92)",
+          "oklch(0.380 0.0069 106.92)",
+          "oklch(0.500 0.0074 106.92)",
+          "oklch(0.620 0.0070 106.92)",
+          "oklch(0.740 0.0060 106.92)",
+          "oklch(0.850 0.0043 106.92)",
+          "oklch(0.950 0.0020 106.92)"
+        ]
+      },
+      "dark-inspector-fill": {
+        "role": "neutral",
+        "displayName": "深色 · 检查器薄覆盖",
+        "tonalRamp": [
+          "oklch(0.150 0.0031 106.89)",
+          "oklch(0.260 0.0045 106.89)",
+          "oklch(0.380 0.0054 106.89)",
+          "oklch(0.500 0.0058 106.89)",
+          "oklch(0.620 0.0055 106.89)",
+          "oklch(0.740 0.0047 106.89)",
+          "oklch(0.850 0.0034 106.89)",
+          "oklch(0.950 0.0016 106.89)"
+        ]
+      },
+      "dark-control-fill": {
+        "role": "neutral",
+        "displayName": "深色 · 轻量控件底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-control-selected": {
+        "role": "neutral",
+        "displayName": "深色 · 选中控件底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-menu-fill": {
+        "role": "neutral",
+        "displayName": "深色 · 密集文字浮层",
+        "tonalRamp": [
+          "oklch(0.150 0.0037 106.80)",
+          "oklch(0.260 0.0054 106.80)",
+          "oklch(0.380 0.0066 106.80)",
+          "oklch(0.500 0.0070 106.80)",
+          "oklch(0.620 0.0067 106.80)",
+          "oklch(0.740 0.0057 106.80)",
+          "oklch(0.850 0.0041 106.80)",
+          "oklch(0.950 0.0019 106.80)"
+        ]
+      },
+      "dark-glass-edge": {
+        "role": "neutral",
+        "displayName": "深色 · 窗口内亮边",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "desktop": {
+        "role": "neutral",
+        "displayName": "预览暖色模式后备底",
+        "tonalRamp": [
+          "oklch(0.150 0.0152 70.89)",
+          "oklch(0.260 0.0222 70.89)",
+          "oklch(0.380 0.0269 70.89)",
+          "oklch(0.500 0.0286 70.89)",
+          "oklch(0.620 0.0274 70.89)",
+          "oklch(0.740 0.0232 70.89)",
+          "oklch(0.850 0.0167 70.89)",
+          "oklch(0.950 0.0079 70.89)"
+        ]
+      },
+      "button-secondary": {
+        "role": "neutral",
+        "displayName": "次要按钮底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "button-secondary-hover": {
+        "role": "neutral",
+        "displayName": "次要按钮悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "button-pressed": {
+        "role": "neutral",
+        "displayName": "次要按钮按下",
+        "tonalRamp": [
+          "oklch(0.150 0.0022 106.48)",
+          "oklch(0.260 0.0031 106.48)",
+          "oklch(0.380 0.0038 106.48)",
+          "oklch(0.500 0.0041 106.48)",
+          "oklch(0.620 0.0039 106.48)",
+          "oklch(0.740 0.0033 106.48)",
+          "oklch(0.850 0.0024 106.48)",
+          "oklch(0.950 0.0011 106.48)"
+        ]
+      },
+      "dark-button-secondary": {
+        "role": "neutral",
+        "displayName": "深色 · 次要按钮底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-button-secondary-hover": {
+        "role": "neutral",
+        "displayName": "深色 · 次要按钮悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "danger-fill": {
+        "role": "secondary",
+        "displayName": "危险按钮底",
+        "tonalRamp": [
+          "oklch(0.150 0.0839 24.24)",
+          "oklch(0.260 0.1226 24.24)",
+          "oklch(0.380 0.1484 24.24)",
+          "oklch(0.500 0.1580 24.24)",
+          "oklch(0.620 0.1512 24.24)",
+          "oklch(0.740 0.1280 24.24)",
+          "oklch(0.850 0.0921 24.24)",
+          "oklch(0.950 0.0437 24.24)"
+        ]
+      },
+      "danger-hover": {
+        "role": "secondary",
+        "displayName": "危险按钮悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0768 24.54)",
+          "oklch(0.260 0.1122 24.54)",
+          "oklch(0.380 0.1359 24.54)",
+          "oklch(0.500 0.1446 24.54)",
+          "oklch(0.620 0.1384 24.54)",
+          "oklch(0.740 0.1172 24.54)",
+          "oklch(0.850 0.0843 24.54)",
+          "oklch(0.950 0.0400 24.54)"
+        ]
+      },
+      "focus": {
+        "role": "primary",
+        "displayName": "键盘焦点",
+        "tonalRamp": [
+          "oklch(0.150 0.0935 253.74)",
+          "oklch(0.260 0.1366 253.74)",
+          "oklch(0.380 0.1655 253.74)",
+          "oklch(0.500 0.1761 253.74)",
+          "oklch(0.620 0.1685 253.74)",
+          "oklch(0.740 0.1427 253.74)",
+          "oklch(0.850 0.1027 253.74)",
+          "oklch(0.950 0.0488 253.74)"
+        ]
+      },
+      "focus-input": {
+        "role": "primary",
+        "displayName": "输入焦点",
+        "tonalRamp": [
+          "oklch(0.150 0.0935 253.74)",
+          "oklch(0.260 0.1366 253.74)",
+          "oklch(0.380 0.1655 253.74)",
+          "oklch(0.500 0.1761 253.74)",
+          "oklch(0.620 0.1685 253.74)",
+          "oklch(0.740 0.1427 253.74)",
+          "oklch(0.850 0.1027 253.74)",
+          "oklch(0.950 0.0488 253.74)"
+        ]
+      },
+      "tag-dot": {
+        "role": "secondary",
+        "displayName": "文件标签圆点",
+        "tonalRamp": [
+          "oklch(0.150 0.0548 149.68)",
+          "oklch(0.260 0.0801 149.68)",
+          "oklch(0.380 0.0970 149.68)",
+          "oklch(0.500 0.1032 149.68)",
+          "oklch(0.620 0.0987 149.68)",
+          "oklch(0.740 0.0836 149.68)",
+          "oklch(0.850 0.0602 149.68)",
+          "oklch(0.950 0.0286 149.68)"
+        ]
+      },
+      "reduced-window": {
+        "role": "neutral",
+        "displayName": "实体窗口",
+        "tonalRamp": [
+          "oklch(0.150 0.0029 95.10)",
+          "oklch(0.260 0.0042 95.10)",
+          "oklch(0.380 0.0051 95.10)",
+          "oklch(0.500 0.0055 95.10)",
+          "oklch(0.620 0.0052 95.10)",
+          "oklch(0.740 0.0044 95.10)",
+          "oklch(0.850 0.0032 95.10)",
+          "oklch(0.950 0.0015 95.10)"
+        ]
+      },
+      "reduced-inspector": {
+        "role": "neutral",
+        "displayName": "实体检查器",
+        "tonalRamp": [
+          "oklch(0.150 0.0036 97.36)",
+          "oklch(0.260 0.0053 97.36)",
+          "oklch(0.380 0.0064 97.36)",
+          "oklch(0.500 0.0068 97.36)",
+          "oklch(0.620 0.0065 97.36)",
+          "oklch(0.740 0.0055 97.36)",
+          "oklch(0.850 0.0040 97.36)",
+          "oklch(0.950 0.0019 97.36)"
+        ]
+      },
+      "reduced-menu": {
+        "role": "neutral",
+        "displayName": "实体菜单",
+        "tonalRamp": [
+          "oklch(0.150 0.0029 95.10)",
+          "oklch(0.260 0.0042 95.10)",
+          "oklch(0.380 0.0051 95.10)",
+          "oklch(0.500 0.0054 95.10)",
+          "oklch(0.620 0.0052 95.10)",
+          "oklch(0.740 0.0044 95.10)",
+          "oklch(0.850 0.0032 95.10)",
+          "oklch(0.950 0.0015 95.10)"
+        ]
+      },
+      "dark-reduced-window": {
+        "role": "neutral",
+        "displayName": "深色 · 实体窗口",
+        "tonalRamp": [
+          "oklch(0.150 0.0046 106.87)",
+          "oklch(0.260 0.0067 106.87)",
+          "oklch(0.380 0.0081 106.87)",
+          "oklch(0.500 0.0086 106.87)",
+          "oklch(0.620 0.0082 106.87)",
+          "oklch(0.740 0.0070 106.87)",
+          "oklch(0.850 0.0050 106.87)",
+          "oklch(0.950 0.0024 106.87)"
+        ]
+      },
+      "dark-reduced-inspector": {
+        "role": "neutral",
+        "displayName": "深色 · 实体检查器",
+        "tonalRamp": [
+          "oklch(0.150 0.0046 106.90)",
+          "oklch(0.260 0.0068 106.90)",
+          "oklch(0.380 0.0082 106.90)",
+          "oklch(0.500 0.0087 106.90)",
+          "oklch(0.620 0.0084 106.90)",
+          "oklch(0.740 0.0071 106.90)",
+          "oklch(0.850 0.0051 106.90)",
+          "oklch(0.950 0.0024 106.90)"
+        ]
+      },
+      "dark-reduced-menu": {
+        "role": "neutral",
+        "displayName": "深色 · 实体菜单",
+        "tonalRamp": [
+          "oklch(0.150 0.0045 106.85)",
+          "oklch(0.260 0.0066 106.85)",
+          "oklch(0.380 0.0080 106.85)",
+          "oklch(0.500 0.0085 106.85)",
+          "oklch(0.620 0.0082 106.85)",
+          "oklch(0.740 0.0069 106.85)",
+          "oklch(0.850 0.0050 106.85)",
+          "oklch(0.950 0.0024 106.85)"
+        ]
+      },
+      "sidebar-tint": {
+        "role": "neutral",
+        "displayName": "浅色侧栏覆盖",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-sidebar-tint": {
+        "role": "neutral",
+        "displayName": "深色侧栏覆盖",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-reduced-control-fill": {
+        "role": "neutral",
+        "displayName": "深色实体模式控件底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "dark-reduced-control-selected": {
+        "role": "neutral",
+        "displayName": "深色实体模式选中控件底",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 89.88)",
+          "oklch(0.260 0.0000 89.88)",
+          "oklch(0.380 0.0000 89.88)",
+          "oklch(0.500 0.0000 89.88)",
+          "oklch(0.620 0.0000 89.88)",
+          "oklch(0.740 0.0000 89.88)",
+          "oklch(0.850 0.0000 89.88)",
+          "oklch(0.950 0.0000 89.88)"
+        ]
+      },
+      "content-header": {
+        "role": "neutral",
+        "displayName": "共享内容材质的透明表头",
+        "tonalRamp": [
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent"
+        ]
+      },
+      "dark-content-header": {
+        "role": "neutral",
+        "displayName": "深色 · 共享内容材质的透明表头",
+        "tonalRamp": [
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent",
+          "transparent"
+        ]
+      },
+      "reduced-content": {
+        "role": "neutral",
+        "displayName": "减少透明度 · 实体内容与表头",
+        "tonalRamp": [
+          "oklch(0.150 0.0022 91.45)",
+          "oklch(0.260 0.0032 91.45)",
+          "oklch(0.380 0.0039 91.45)",
+          "oklch(0.500 0.0041 91.45)",
+          "oklch(0.620 0.0040 91.45)",
+          "oklch(0.740 0.0034 91.45)",
+          "oklch(0.850 0.0024 91.45)",
+          "oklch(0.950 0.0011 91.45)"
+        ]
+      },
+      "dark-reduced-content": {
+        "role": "neutral",
+        "displayName": "深色减少透明度 · 实体内容与表头",
+        "tonalRamp": [
+          "oklch(0.150 0.0029 106.78)",
+          "oklch(0.260 0.0043 106.78)",
+          "oklch(0.380 0.0052 106.78)",
+          "oklch(0.500 0.0055 106.78)",
+          "oklch(0.620 0.0053 106.78)",
+          "oklch(0.740 0.0045 106.78)",
+          "oklch(0.850 0.0032 106.78)",
+          "oklch(0.950 0.0015 106.78)"
+        ]
+      },
+      "settings-sidebar": {
+        "role": "neutral",
+        "displayName": "设置 · 侧栏材质",
+        "tonalRamp": [
+          "oklch(0.150 0.0044 87.47)",
+          "oklch(0.260 0.0071 87.47)",
+          "oklch(0.380 0.0091 87.47)",
+          "oklch(0.500 0.0098 87.47)",
+          "oklch(0.620 0.0091 87.47)",
+          "oklch(0.740 0.0071 87.47)",
+          "oklch(0.850 0.0044 87.47)",
+          "oklch(0.950 0.0015 87.47)"
+        ]
+      },
+      "settings-pane": {
+        "role": "neutral",
+        "displayName": "设置 · 内容面材质",
+        "tonalRamp": [
+          "oklch(0.150 0.0019 91.45)",
+          "oklch(0.260 0.0030 91.45)",
+          "oklch(0.380 0.0038 91.45)",
+          "oklch(0.500 0.0041 91.45)",
+          "oklch(0.620 0.0038 91.45)",
+          "oklch(0.740 0.0030 91.45)",
+          "oklch(0.850 0.0019 91.45)",
+          "oklch(0.950 0.0006 91.45)"
+        ]
+      },
+      "settings-group": {
+        "role": "neutral",
+        "displayName": "设置 · 内嵌分组",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 0.00)",
+          "oklch(0.260 0.0000 0.00)",
+          "oklch(0.380 0.0000 0.00)",
+          "oklch(0.500 0.0000 0.00)",
+          "oklch(0.620 0.0000 0.00)",
+          "oklch(0.740 0.0000 0.00)",
+          "oklch(0.850 0.0000 0.00)",
+          "oklch(0.950 0.0000 0.00)"
+        ]
+      },
+      "settings-separator": {
+        "role": "neutral",
+        "displayName": "设置 · 组内分隔",
+        "tonalRamp": [
+          "oklch(0.150 0.0025 106.78)",
+          "oklch(0.260 0.0040 106.78)",
+          "oklch(0.380 0.0051 106.78)",
+          "oklch(0.500 0.0055 106.78)",
+          "oklch(0.620 0.0051 106.78)",
+          "oklch(0.740 0.0040 106.78)",
+          "oklch(0.850 0.0025 106.78)",
+          "oklch(0.950 0.0009 106.78)"
+        ]
+      },
+      "settings-popup-hover": {
+        "role": "neutral",
+        "displayName": "设置 · 下拉控件悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0036 97.49)",
+          "oklch(0.260 0.0059 97.49)",
+          "oklch(0.380 0.0075 97.49)",
+          "oklch(0.500 0.0080 97.49)",
+          "oklch(0.620 0.0075 97.49)",
+          "oklch(0.740 0.0059 97.49)",
+          "oklch(0.850 0.0036 97.49)",
+          "oklch(0.950 0.0013 97.49)"
+        ]
+      },
+      "dark-settings-sidebar": {
+        "role": "neutral",
+        "displayName": "深色设置 · 侧栏材质",
+        "tonalRamp": [
+          "oklch(0.150 0.0033 106.92)",
+          "oklch(0.260 0.0054 106.92)",
+          "oklch(0.380 0.0068 106.92)",
+          "oklch(0.500 0.0074 106.92)",
+          "oklch(0.620 0.0068 106.92)",
+          "oklch(0.740 0.0054 106.92)",
+          "oklch(0.850 0.0033 106.92)",
+          "oklch(0.950 0.0012 106.92)"
+        ]
+      },
+      "dark-settings-pane": {
+        "role": "neutral",
+        "displayName": "深色设置 · 内容面材质",
+        "tonalRamp": [
+          "oklch(0.150 0.0025 106.78)",
+          "oklch(0.260 0.0040 106.78)",
+          "oklch(0.380 0.0051 106.78)",
+          "oklch(0.500 0.0055 106.78)",
+          "oklch(0.620 0.0051 106.78)",
+          "oklch(0.740 0.0040 106.78)",
+          "oklch(0.850 0.0025 106.78)",
+          "oklch(0.950 0.0009 106.78)"
+        ]
+      },
+      "dark-settings-group": {
+        "role": "neutral",
+        "displayName": "深色设置 · 内嵌分组",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 0.00)",
+          "oklch(0.260 0.0000 0.00)",
+          "oklch(0.380 0.0000 0.00)",
+          "oklch(0.500 0.0000 0.00)",
+          "oklch(0.620 0.0000 0.00)",
+          "oklch(0.740 0.0000 0.00)",
+          "oklch(0.850 0.0000 0.00)",
+          "oklch(0.950 0.0000 0.00)"
+        ]
+      },
+      "dark-settings-separator": {
+        "role": "neutral",
+        "displayName": "深色设置 · 组内分隔",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 0.00)",
+          "oklch(0.260 0.0000 0.00)",
+          "oklch(0.380 0.0000 0.00)",
+          "oklch(0.500 0.0000 0.00)",
+          "oklch(0.620 0.0000 0.00)",
+          "oklch(0.740 0.0000 0.00)",
+          "oklch(0.850 0.0000 0.00)",
+          "oklch(0.950 0.0000 0.00)"
+        ]
+      },
+      "dark-settings-popup-hover": {
+        "role": "neutral",
+        "displayName": "深色设置 · 下拉控件悬停",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 0.00)",
+          "oklch(0.260 0.0000 0.00)",
+          "oklch(0.380 0.0000 0.00)",
+          "oklch(0.500 0.0000 0.00)",
+          "oklch(0.620 0.0000 0.00)",
+          "oklch(0.740 0.0000 0.00)",
+          "oklch(0.850 0.0000 0.00)",
+          "oklch(0.950 0.0000 0.00)"
+        ]
+      },
+      "settings-switch-off": {
+        "role": "neutral",
+        "displayName": "设置 · 开关关闭底",
+        "tonalRamp": [
+          "oklch(0.150 0.0033 106.61)",
+          "oklch(0.260 0.0053 106.61)",
+          "oklch(0.380 0.0068 106.61)",
+          "oklch(0.500 0.0073 106.61)",
+          "oklch(0.620 0.0068 106.61)",
+          "oklch(0.740 0.0053 106.61)",
+          "oklch(0.850 0.0033 106.61)",
+          "oklch(0.950 0.0011 106.61)"
+        ]
+      },
+      "settings-high-contrast-separator": {
+        "role": "neutral",
+        "displayName": "设置 · 高对比度边界",
+        "tonalRamp": [
+          "oklch(0.150 0.0048 106.73)",
+          "oklch(0.260 0.0077 106.73)",
+          "oklch(0.380 0.0098 106.73)",
+          "oklch(0.500 0.0105 106.73)",
+          "oklch(0.620 0.0098 106.73)",
+          "oklch(0.740 0.0077 106.73)",
+          "oklch(0.850 0.0048 106.73)",
+          "oklch(0.950 0.0016 106.73)"
+        ]
+      },
+      "settings-inactive-selection": {
+        "role": "neutral",
+        "displayName": "设置聚焦时 · 主窗口失焦选择",
+        "tonalRamp": [
+          "oklch(0.150 0.0025 106.51)",
+          "oklch(0.260 0.0039 106.51)",
+          "oklch(0.380 0.0050 106.51)",
+          "oklch(0.500 0.0054 106.51)",
+          "oklch(0.620 0.0050 106.51)",
+          "oklch(0.740 0.0039 106.51)",
+          "oklch(0.850 0.0025 106.51)",
+          "oklch(0.950 0.0008 106.51)"
+        ]
+      },
+      "settings-inactive-ink": {
+        "role": "neutral",
+        "displayName": "设置聚焦时 · 主窗口失焦选择文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0023 106.64)",
+          "oklch(0.260 0.0037 106.64)",
+          "oklch(0.380 0.0047 106.64)",
+          "oklch(0.500 0.0050 106.64)",
+          "oklch(0.620 0.0047 106.64)",
+          "oklch(0.740 0.0037 106.64)",
+          "oklch(0.850 0.0023 106.64)",
+          "oklch(0.950 0.0008 106.64)"
+        ]
+      },
+      "dark-settings-inactive-selection": {
+        "role": "neutral",
+        "displayName": "深色设置聚焦时 · 主窗口失焦选择",
+        "tonalRamp": [
+          "oklch(0.150 0.0043 106.77)",
+          "oklch(0.260 0.0070 106.77)",
+          "oklch(0.380 0.0089 106.77)",
+          "oklch(0.500 0.0095 106.77)",
+          "oklch(0.620 0.0089 106.77)",
+          "oklch(0.740 0.0070 106.77)",
+          "oklch(0.850 0.0043 106.77)",
+          "oklch(0.950 0.0015 106.77)"
+        ]
+      },
+      "dark-settings-inactive-ink": {
+        "role": "neutral",
+        "displayName": "深色设置聚焦时 · 主窗口失焦选择文字",
+        "tonalRamp": [
+          "oklch(0.150 0.0043 106.59)",
+          "oklch(0.260 0.0069 106.59)",
+          "oklch(0.380 0.0087 106.59)",
+          "oklch(0.500 0.0094 106.59)",
+          "oklch(0.620 0.0087 106.59)",
+          "oklch(0.740 0.0069 106.59)",
+          "oklch(0.850 0.0043 106.59)",
+          "oklch(0.950 0.0015 106.59)"
+        ]
+      },
+      "settings-nav-selection": {
+        "role": "neutral",
+        "displayName": "设置 · 中性分类选择",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 0.00)",
+          "oklch(0.260 0.0000 0.00)",
+          "oklch(0.380 0.0000 0.00)",
+          "oklch(0.500 0.0000 0.00)",
+          "oklch(0.620 0.0000 0.00)",
+          "oklch(0.740 0.0000 0.00)",
+          "oklch(0.850 0.0000 0.00)",
+          "oklch(0.950 0.0000 0.00)"
+        ]
+      },
+      "dark-settings-nav-selection": {
+        "role": "neutral",
+        "displayName": "深色设置 · 中性分类选择",
+        "tonalRamp": [
+          "oklch(0.150 0.0000 0.00)",
+          "oklch(0.260 0.0000 0.00)",
+          "oklch(0.380 0.0000 0.00)",
+          "oklch(0.500 0.0000 0.00)",
+          "oklch(0.620 0.0000 0.00)",
+          "oklch(0.740 0.0000 0.00)",
+          "oklch(0.850 0.0000 0.00)",
+          "oklch(0.950 0.0000 0.00)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "对话框标题",
+        "purpose": "对话框的主要标题。"
+      },
+      "title": {
+        "displayName": "当前位置",
+        "purpose": "窗口当前位置，不使用品牌标题字样。"
+      },
+      "inspector-title": {
+        "displayName": "预览文件名",
+        "purpose": "检查器中的选中文件名称。"
+      },
+      "body": {
+        "displayName": "正文与导航",
+        "purpose": "常规列表正文与侧栏导航。"
+      },
+      "file-name": {
+        "displayName": "文件与按钮",
+        "purpose": "图标文件名与常用按钮。"
+      },
+      "label": {
+        "displayName": "辅助信息",
+        "purpose": "元信息、状态、标签。"
+      },
+      "path": {
+        "displayName": "等宽路径",
+        "purpose": "路径显示、编辑与补全。"
+      },
+      "status": {
+        "displayName": "紧凑状态",
+        "purpose": "底部状态、存储信息与少量辅助行；不用于正文。"
+      },
+      "settings-title": {
+        "displayName": "设置页标题",
+        "purpose": "独立设置窗口的当前分类标题。"
+      },
+      "settings-section": {
+        "displayName": "设置分组标题",
+        "purpose": "内嵌表单分组上方的小标题。"
+      },
+      "settings-popup": {
+        "displayName": "设置下拉控件",
+        "purpose": "右对齐的原生 select 文字与固定 20 px 行高。"
+      }
+    },
+    "shadows": [
+      {
+        "name": "window-light",
+        "value": "0 24px 65px -15px #44301d59, 0 4px 16px #44301d15",
+        "purpose": "浅色共享窗口。"
+      },
+      {
+        "name": "window-dark",
+        "value": "0 28px 70px -15px #0008,0 5px 18px #0003",
+        "purpose": "深色共享窗口。"
+      },
+      {
+        "name": "window-edge",
+        "value": "inset 0 1px 0 var(--glass-edge),inset 0 0 0 .5px #ffffff40",
+        "purpose": "窗口内侧细亮边。"
+      },
+      {
+        "name": "glass-group-light",
+        "value": "inset 0 1px 0 #ffffffb0,inset 0 -1px 0 #ffffff35,0 1px 3px #3d30231a",
+        "purpose": "浅色功能组、更多与搜索。"
+      },
+      {
+        "name": "glass-group-dark",
+        "value": "inset 0 1px 0 #ffffff30,inset 0 -1px 0 #ffffff08,0 1px 4px #0002",
+        "purpose": "深色功能组、更多与搜索。"
+      },
+      {
+        "name": "view-selected",
+        "value": "0 1px 3px #18160f15",
+        "purpose": "视图选中项。"
+      },
+      {
+        "name": "navigation-active",
+        "value": "0 1px 3px #392f1c08,inset 0 .5px 0 #ffffff60",
+        "purpose": "浅色侧栏活动项。"
+      },
+      {
+        "name": "navigation-active-dark",
+        "value": "inset 0 .5px 0 #ffffff12",
+        "purpose": "深色侧栏活动项。"
+      },
+      {
+        "name": "button-secondary",
+        "value": "0 1px 2px #0000000e",
+        "purpose": "次要与危险按钮。"
+      },
+      {
+        "name": "operation",
+        "value": "0 6px 22px #1e1b1420",
+        "purpose": "待操作和任务反馈。"
+      },
+      {
+        "name": "floating-light",
+        "value": "0 10px 36px #19161330",
+        "purpose": "浅色菜单与路径建议。"
+      },
+      {
+        "name": "floating-dark",
+        "value": "0 10px 36px #0007",
+        "purpose": "深色菜单与路径建议。"
+      },
+      {
+        "name": "dialog",
+        "value": "0 24px 75px #18150f42",
+        "purpose": "普通对话框与媒体窗口。"
+      },
+      {
+        "name": "sidebar-overlay",
+        "value": "8px 0 24px #3024141a",
+        "purpose": "窄窗侧栏覆盖层。"
+      },
+      {
+        "name": "settings-window",
+        "value": "var(--window-shadow)",
+        "purpose": "设置窗口复用主窗口的 window-light / window-dark 投影；::after 复用 window-edge 细亮边。"
+      },
+      {
+        "name": "settings-switch-knob",
+        "value": "0 1px 2px #0002",
+        "purpose": "设置开关的白色滑块。"
+      }
+    ],
+    "motion": [
+      {
+        "name": "control",
+        "value": "120ms ease-out",
+        "purpose": "按钮背景和文字颜色。"
+      },
+      {
+        "name": "preview-overlay",
+        "value": "120ms ease",
+        "purpose": "预览图片的展开控制淡入。"
+      },
+      {
+        "name": "switch",
+        "value": "120ms ease",
+        "purpose": "设置开关背景与滑块。"
+      },
+      {
+        "name": "media-enter",
+        "value": "none",
+        "purpose": "快速预览不执行入场动画。"
+      },
+      {
+        "name": "progress",
+        "value": "200ms linear",
+        "purpose": "示例任务进度宽度。"
+      },
+      {
+        "name": "loading",
+        "value": "1s linear infinite",
+        "purpose": "加载状态图标旋转。"
+      },
+      {
+        "name": "reduced-motion",
+        "value": ".001ms",
+        "purpose": "系统减少动态效果时的动画与过渡；次数为 1，滚动为 auto。"
+      },
+      {
+        "name": "preview-background-cycle",
+        "value": "36s linear infinite",
+        "purpose": "仅设计预览桌面的 RGB 六色循环；默认运行，暂停或系统减少动态效果时冻结。"
+      },
+      {
+        "name": "preview-background-readout",
+        "value": "250ms",
+        "purpose": "仅预览背景运行且页面可见时采样三通道读数；隐藏时停止采样。"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "search-collapsed-max",
+        "value": "1190px"
+      },
+      {
+        "name": "compact-max",
+        "value": "980px"
+      },
+      {
+        "name": "sidebar-overlay-max",
+        "value": "800px"
+      },
+      {
+        "name": "narrow-preview-max",
+        "value": "600px"
+      },
+      {
+        "name": "settings-compact-max",
+        "value": "650px"
+      },
+      {
+        "name": "settings-horizontal-navigation-max",
+        "value": "520px"
+      },
+      {
+        "name": "settings-stacked-appearance-max",
+        "value": "390px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "主要按钮",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "最小高 29 px 的原型按钮；保持清楚的主次与危险语义。",
+      "html": "<button class=\"ds-button-primary\">开始解压</button>",
+      "css": ".ds-button-primary{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:12px;line-height:1.5;min-height:29px;padding:5px 12px;border:0;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;cursor:default;transition:background-color .12s ease-out,color .12s ease-out;background:var(--accent,#006cdd);color:#fff;box-shadow:none;}.ds-button-primary:hover:not(:disabled){background:var(--accent-hover,#005fc7);}.ds-button-primary:active:not(:disabled){background:var(--accent-hover,#005fc7);}.ds-button-primary:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}.ds-button-primary:disabled{opacity:.32;}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition-duration:.001ms;}}"
+    },
+    {
+      "name": "次要按钮",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "最小高 29 px 的原型按钮；保持清楚的主次与危险语义。",
+      "html": "<button class=\"ds-button-secondary\">取消</button>",
+      "css": ".ds-button-secondary{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:12px;line-height:1.5;min-height:29px;padding:5px 12px;border:0;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;cursor:default;transition:background-color .12s ease-out,color .12s ease-out;background:#ffffff66;color:var(--ink,#272521);box-shadow:0 1px 2px #0000000e;}.ds-button-secondary:hover:not(:disabled){background:#ffffffa6;}.ds-button-secondary:active:not(:disabled){background:#dbdbd8;}.ds-button-secondary:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}.ds-button-secondary:disabled{opacity:.32;}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition-duration:.001ms;}}:host-context([data-theme=dark]) .ds-button-secondary{background:#ffffff16;color:#eeeee9}:host-context([data-theme=dark]) .ds-button-secondary:hover:not(:disabled){background:#ffffff25}"
+    },
+    {
+      "name": "危险按钮",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "最小高 29 px 的原型按钮；保持清楚的主次与危险语义。",
+      "html": "<button class=\"ds-button-danger\">替换</button>",
+      "css": ".ds-button-danger{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:12px;line-height:1.5;min-height:29px;padding:5px 12px;border:0;border-radius:6px;display:inline-flex;align-items:center;justify-content:center;gap:6px;white-space:nowrap;cursor:default;transition:background-color .12s ease-out,color .12s ease-out;background:#b63c3c;color:#fff;box-shadow:0 1px 2px #0000000e;}.ds-button-danger:hover:not(:disabled){background:#9d3030;}.ds-button-danger:active:not(:disabled){background:#9d3030;}.ds-button-danger:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}.ds-button-danger:disabled{opacity:.32;}@media(prefers-reduced-motion:reduce){.ds-button-danger{transition-duration:.001ms;}}"
+    },
+    {
+      "name": "玻璃搜索",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "与功能组同材质的胶囊搜索，窄窗收起为图标入口。",
+      "html": "<label class=\"ds-search\"><svg class=\"ds-symbol\" viewBox=\"0 0 72 72\" width=\"20\" height=\"20\" aria-hidden=\"true\"><defs><mask id=\"ds-symbol-search\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"72\" height=\"72\"><image href=\"data:image/png;base64,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\" x=\"-10.08\" y=\"-10.08\" width=\"92.16\" height=\"92.16\"/></mask></defs><rect width=\"72\" height=\"72\" fill=\"currentColor\" mask=\"url(#ds-symbol-search)\"/></svg><input aria-label=\"搜索当前文件夹\" placeholder=\"搜索此文件夹\"></label>",
+      "css": ".ds-search{display:flex;align-items:center;gap:6px;height:35px;width:145px;padding:0 12px;border-radius:20px;background:var(--control-fill,rgba(255,255,255,.38));box-shadow:inset 0 1px 0 #ffffffb0,inset 0 -1px 0 #ffffff35,0 1px 3px #3d30231a;color:var(--ink,#272521)}.ds-search .ds-symbol{flex-shrink:0;width:18px;height:18px}.ds-search input{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:12px;line-height:1.5;width:100%;min-width:0;padding:0;border:0;background:none;color:var(--ink,#272521);caret-color:var(--accent,#006cdd);outline:0}.ds-search input::placeholder{color:var(--secondary,#555049)}.ds-search:focus-within{background:var(--surface,#fff);box-shadow:0 0 0 3px #2687ed88}.ds-search input:focus-visible{outline:0}:host-context([data-theme=dark]) .ds-search{box-shadow:inset 0 1px 0 #ffffff30,inset 0 -1px 0 #ffffff08,0 1px 4px #0002}:host-context([data-theme=dark]) .ds-search:focus-within{box-shadow:0 0 0 3px #2687ed88}:host-context([data-contrast=high]) .ds-search{outline:1px solid #77777099}@media(prefers-contrast:more){.ds-search{outline:1px solid #77777099}}"
+    },
+    {
+      "name": "编辑路径",
+      "kind": "input",
+      "refersTo": "address-field",
+      "description": "底部路径的编辑态，建议浮层向上展开。",
+      "html": "<label class=\"ds-address\"><input aria-label=\"文件或文件夹路径\" value=\"/Users/demo/Pictures/旅途精选\" spellcheck=\"false\"></label>",
+      "css": ".ds-address{height:28px;display:flex;align-items:center;gap:7px;padding:0 6px;border-radius:6px;background:var(--surface,#fff);box-shadow:0 0 0 2px #2687ed88}.ds-address input{font:11px var(--mono,\"SFMono-Regular\",Menlo,monospace);min-width:0;width:100%;padding:0;border:0;background:none;color:var(--ink,#272521);caret-color:var(--accent,#006cdd);outline:none}.ds-address input:focus-visible{outline:none}"
+    },
+    {
+      "name": "位置导航",
+      "kind": "nav",
+      "refersTo": "navigation-location",
+      "description": "通高侧栏的紧凑位置条目，中性色与轻高光表达活动位置。",
+      "html": "<button class=\"ds-location\" aria-current=\"page\"><svg class=\"ds-symbol\" viewBox=\"0 0 72 72\" width=\"20\" height=\"20\" aria-hidden=\"true\"><defs><mask id=\"ds-symbol-folderStar\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"72\" height=\"72\"><image href=\"data:image/png;base64,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\" x=\"-10.08\" y=\"-10.08\" width=\"92.16\" height=\"92.16\"/></mask></defs><rect width=\"72\" height=\"72\" fill=\"currentColor\" mask=\"url(#ds-symbol-folderStar)\"/></svg><span>旅途精选</span></button>",
+      "css": ".ds-location{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:13px;line-height:1.5;letter-spacing:-.1px;height:30px;width:100%;padding:0 10px;margin:1px 0;display:flex;align-items:center;gap:8px;text-align:left;border:0;border-radius:7px;white-space:nowrap;background:none;color:var(--ink,#272521);cursor:default;transition:background-color .12s ease-out,color .12s ease-out;}.ds-location .ds-symbol{width:19px;height:19px;color:var(--secondary,#555049);flex-shrink:0}.ds-location[aria-current=page]{background:rgba(255,255,255,.43);font-weight:550;box-shadow:0 1px 3px #392f1c08,inset 0 .5px 0 #ffffff60}.ds-location:hover{background:#ffffff26}.ds-location[aria-current=page]:hover{background:#ffffff55}.ds-location:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}:host-context([data-theme=dark]) .ds-location[aria-current=page]{background:#ffffff14;box-shadow:inset 0 .5px 0 #ffffff12}:host-context([data-theme=dark]) .ds-location:hover{background:#ffffff0b}:host-context([data-contrast=high]) .ds-location[aria-current=page]{outline:1px solid var(--secondary,#272521)}@media(prefers-contrast:more){.ds-location[aria-current=page]{outline:1px solid var(--secondary,#373733)}}@media(prefers-reduced-motion:reduce){.ds-location{transition-duration:.001ms;}}"
+    },
+    {
+      "name": "文件标签",
+      "kind": "chip",
+      "refersTo": "file-tag",
+      "description": "只读圆点和文字，不添加标签底色或按钮反馈。",
+      "html": "<span class=\"ds-tag\"><span class=\"ds-tag-dot\"></span>精选</span>",
+      "css": ".ds-tag{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:11px;line-height:1.5;display:inline-flex;align-items:center;gap:6px;padding:0;background:none;color:var(--secondary,#555049)}.ds-tag-dot{height:6px;width:6px;border-radius:50%;background:#4d8f5c}"
+    },
+    {
+      "name": "文件项目",
+      "kind": "card",
+      "refersTo": "file-card",
+      "description": "32% 中性内容底上的文件项目；背景模糊，名称与媒体保持清晰，减少透明度时恢复实体底。",
+      "html": "<div class=\"ds-file-surface\"><div class=\"ds-file\" role=\"option\" aria-selected=\"true\" tabindex=\"0\"><span class=\"ds-file-name\">拍摄清单.md</span><small>2 KB</small></div></div>",
+      "css": ".ds-file-surface{background:var(--content,rgba(241,240,237,.32));backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}:host-context([data-theme=dark]) .ds-file-surface{background:var(--content,rgba(35,35,32,.32))}.ds-file{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);display:flex;align-items:center;flex-direction:column;gap:7px;min-width:0;padding:8px 4px;border-radius:8px;background:none;color:var(--ink,#272521);cursor:default}.ds-file:hover{background:#77777004}.ds-file[aria-selected=true]{background:none}.ds-file-name{font-size:12px;line-height:1.5;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:center;padding:1px 5px;border-radius:4px}.ds-file[aria-selected=true] .ds-file-name{background:var(--accent,#006cdd);color:#fff}.ds-file small{font-size:11px;color:var(--secondary,#555049);margin-top:-5px}.ds-file:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}:host-context([data-transparency=reduced]) .ds-file-surface{background:#f1f0ed;backdrop-filter:none;-webkit-backdrop-filter:none}:host-context([data-transparency=reduced][data-theme=dark]) .ds-file-surface{background:#232320}@media(prefers-reduced-transparency:reduce){.ds-file-surface{background:#f1f0ed;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}:host-context([data-theme=dark]) .ds-file-surface{background:#232320}}"
+    },
+    {
+      "name": "玻璃视图功能组",
+      "kind": "custom",
+      "refersTo": "view-control",
+      "description": "列表、图标与排序共享材质，选中项位于同一功能组中。",
+      "html": "<div class=\"ds-toolbar\" role=\"group\" aria-label=\"文件视图\"><button class=\"ds-tool\" aria-label=\"列表视图\" aria-pressed=\"true\"><svg class=\"ds-symbol\" viewBox=\"0 0 72 72\" width=\"20\" height=\"20\" aria-hidden=\"true\"><defs><mask id=\"ds-symbol-list\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"72\" height=\"72\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAGxlWElmTU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAADYAAAAAQAAANgAAAABAAKgAgAEAAAAAQAAAEigAwAEAAAAAQAAAEgAAAAARDxGgQAAAAlwSFlzAAAhOAAAITgBRZYxYAAAAtlJREFUeAHtmjloFkEYhn9FxCN4EVEELdTCQhQtrD0KQey0sRFtLFQEEbsUYmEhWliJiII2XoWKWtmJB4kItgoWBos0HsEj3vq84MIyjMh+JDvy/+8HD8x+/87O7DM7m53ddDoOG7ABG7ABG7ABG7ABG7ABG7ABG7ABG7ABG7ABG7CBcTIwKXic6dTrg18wCt+gKyMiaCEmdsFm+AxX4Rp8gDSmkFgC09IfWtz+QVsjoIFsHDqBprGPCgO1Spsov4UbtVxVXEPhIEhqqdAg3oEz8L2NTmg0NLXq5OSoL7qy6vuVKo/Rj9AgTdZZNAyNSBq5nPb5BKXvTxqUNzAVGkdkip2jlQPQD2r8FVyCXJwiORvm5X5sKadpdROGI+1FbtL663UYNoCujitwFiTrb1HyJi1Brdx70pOfQSJ02aYH8rYN2IAN2IAN2MBEGIg8B6kfK2E16DnoIehhsSsjImgdJvSgWAl6QPko5CTNJL8e5kCp0CA+gReRDkSWGodoaHutsRWUn8HJWq4qar/9UFLQV9p/DHtBa8MJj9e0kK7K9TohF7dIpvuW2NZSY3Gug//KRVbzzzMHzeW02yC8y+zfZkpT7BF8jDQamWInaGgAVoFG5j5chFxcIPkeSk4xCRoCvfJoHJGbtBaoW6C6SUvQvcYt90CFyPTsAS0+RRuwARuwARv4XwxEnoPU961QfXq+TFmLwa6MiKAdmDgCC+AnvITd8BTSmE9iD2jfUqGPmrch9DAbEaSrZW1ytqfZ1mo5jeMkdkLJ72IaxGHYCI2XG5G12DIaSmNpmvizrfVayaun6pbWgrOgFUF3aaj+PkidUC4X50kuh9A/DuQOGMh9oc51GAnU7USm2CIaOgbbYAw0vTSVcq8TtLDth8iVSrVxCU0xvVEYjRwtIkh15kIf6OWX3veoAw4bsAEbsAEbsAEbsAEbsAEbsAEbsAEbsAEbsAEb6HEDvwF9E7Za/o+UPwAAALR0RVh0aW1wZWNjYWJsZTpwcm9tcHQAQXBwbGUgU0YgU3ltYm9scyByZW5kZXJlZCB2aWEgQXBwS2l0IE5TSW1hZ2Uoc3lzdGVtU3ltYm9sTmFtZTopIG9uIGluc3RhbGxlZCBtYWNPUyBmb3IgdGhlIE15Rm9sZHMgbWFjT1MgVUkgZGVzaWduIHJlZmVyZW5jZTsgdXNlIG5hdGl2ZSBzeXN0ZW0gQVBJIGluIHByb2R1Y3Rpb24u1dLn9AAAAABJRU5ErkJggg==\" x=\"-10.08\" y=\"-10.08\" width=\"92.16\" height=\"92.16\"/></mask></defs><rect width=\"72\" height=\"72\" fill=\"currentColor\" mask=\"url(#ds-symbol-list)\"/></svg></button><button class=\"ds-tool\" aria-label=\"图标视图\" aria-pressed=\"false\"><svg class=\"ds-symbol\" viewBox=\"0 0 72 72\" width=\"20\" height=\"20\" aria-hidden=\"true\"><defs><mask id=\"ds-symbol-grid\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"72\" height=\"72\"><image href=\"data:image/png;base64,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\" x=\"-10.08\" y=\"-10.08\" width=\"92.16\" height=\"92.16\"/></mask></defs><rect width=\"72\" height=\"72\" fill=\"currentColor\" mask=\"url(#ds-symbol-grid)\"/></svg></button><button class=\"ds-tool\" aria-label=\"排序方式\"><svg class=\"ds-symbol\" viewBox=\"0 0 72 72\" width=\"20\" height=\"20\" aria-hidden=\"true\"><defs><mask id=\"ds-symbol-sort\" mask-type=\"alpha\" maskUnits=\"userSpaceOnUse\" x=\"0\" y=\"0\" width=\"72\" height=\"72\"><image href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAAAXNSR0IArs4c6QAAAGxlWElmTU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAIdpAAQAAAABAAAATgAAAAAAAADYAAAAAQAAANgAAAABAAKgAgAEAAAAAQAAAEigAwAEAAAAAQAAAEgAAAAARDxGgQAAAAlwSFlzAAAhOAAAITgBRZYxYAAABAJJREFUeAHtmjmIFEEUhscDFM9EBa8V0UDwCswEb9HI9cArMRJRQQNXVARREDxAQdTAAwQVwcBMEwNvQ8X1QMXEIxHP9cBF8f7+ZQse44y9PVOjNfAefNvVVd1vqr6p6unp2ULBww24ATfgBtyAG3ADbsANuAE34AbcgBtwA27ADcQx0I00g6BLnHR/ZFH+gTXM3/aCter8YLKvgUZogAfwFWJFXxKtg7kwHG7BT6iLkJyD8Al+wQvYDL0gVswkUSso/ysYCXURQc5neqvOB15Tjilprcmt15gByUc5ObWQpOUV8mo7O3U7uhhrWRXPHDsIlTWTNkG1y62uBJWScw8JQc4Pyo/MfgxJdSOolJxmZDQZId8pL4fnpi5I6kldJVEXgkrJecxoF4A+ZcIM0rY/rIf3pl6fPlpulUhKXpDkHAB7zdGAV4DurRaDFTSM/d6wC76YNp2zEfJKSlpQqZnzlkFqNnQHxSqwgsa31RYKA9gegq+mvRJJyQrSrX3xzGmhbgv0gRAbKFhBE0MDW82mI1AsSef0gI5EsoK203u7rN6xvxWsHA1QN4VW0CRVmpCko2AlvWR/iTnmb8V/Jqjz33pRom0ZdWEZ6YK7D/bDR8gTzzh4J5wEfcoptPzmtpUS+tM1Z1+ucrwuthJyArTcPkAl8ZSTdoC+ZDaC7pduQFKRV9Aeen8TJOgsaBZVE084WZJugQSdg6Qir6D79F7EDC23wzETxsyV9xoU87XrIpcLynibXJALyjCQ0ewzyAVlGMho9hnkgjIMZDSnNoP0LGkUDMnod97mEZwgOuU9Me+ddN78eY/Xt/k50Aqn4ApUE5oA82Ee6OnCcbgEHY7UBDXR8wntvdc7rkHpC3IlodkiOdtgrEmQS1BqS6zFDGQqZQ1usqnraFFyFkCxHJu/Q7lSE7SXXt8xPZ/WPsjiB26aWTbsvuRoSW0FO3Musn8ckoisJ4rlOhne+dscoEEHLlC2j21XmjYdY2eZHrqVOr9YMof9v6hUkHocJGkmBUHanofRoFgKtm18W22hMIWtni3ZNslNSo76Wo0gnV9O0mnahsIssBIa2B8Hl4vqtaySk0OfqhakHJK0EOxM+sb+QSgWJDlnwEpLVg79jCJIeYKku5TD4HWPdMzs/6R8BPTwPxyTtBz6GU2QcpWTFGRIkP0pKnk5GlS11yDlsCFJi8DOpCDIbiXHfqLZHEmVYwvS4IKke5StlFCuGzkazGozCC0BXURjRDlJNZOjb8+1CP2kPAZ+wHU4AfqvjhjxkCRvoB9o9lyD3e1bNnFD70gtQnmnwyDQktCdbcxQfl1rhoHyN4OHG3ADbsANuAE34AbcgBtwA27ADbgBN+AG3EC2gd9d2WY4d31UUAAAALR0RVh0aW1wZWNjYWJsZTpwcm9tcHQAQXBwbGUgU0YgU3ltYm9scyByZW5kZXJlZCB2aWEgQXBwS2l0IE5TSW1hZ2Uoc3lzdGVtU3ltYm9sTmFtZTopIG9uIGluc3RhbGxlZCBtYWNPUyBmb3IgdGhlIE15Rm9sZHMgbWFjT1MgVUkgZGVzaWduIHJlZmVyZW5jZTsgdXNlIG5hdGl2ZSBzeXN0ZW0gQVBJIGluIHByb2R1Y3Rpb24u1dLn9AAAAABJRU5ErkJggg==\" x=\"-10.08\" y=\"-10.08\" width=\"92.16\" height=\"92.16\"/></mask></defs><rect width=\"72\" height=\"72\" fill=\"currentColor\" mask=\"url(#ds-symbol-sort)\"/></svg></button></div>",
+      "css": ".ds-toolbar{display:inline-flex;align-items:center;gap:1px;padding:3px;border-radius:22px;background:var(--control-fill,rgba(255,255,255,.38));box-shadow:inset 0 1px 0 #ffffffb0,inset 0 -1px 0 #ffffff35,0 1px 3px #3d30231a}.ds-tool{display:inline-flex;align-items:center;justify-content:center;width:31px;height:29px;padding:0;border:0;border-radius:50%;background:none;color:var(--ink,#272521);cursor:default;transition:background-color .12s ease-out,color .12s ease-out;}.ds-tool .ds-symbol{width:20px;height:20px}.ds-tool:last-child{margin-left:3px}.ds-tool:hover:not(:disabled){background:var(--hover,rgba(30,30,27,.065))}.ds-tool:active:not(:disabled){background:#24231f20}.ds-tool[aria-pressed=true]{background:var(--control-selected,rgba(255,255,255,.72));box-shadow:0 1px 3px #18160f15}.ds-tool:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}.ds-tool:disabled{opacity:.32}:host-context([data-theme=dark]) .ds-toolbar{box-shadow:inset 0 1px 0 #ffffff30,inset 0 -1px 0 #ffffff08,0 1px 4px #0002}:host-context([data-contrast=high]) .ds-toolbar{outline:1px solid #77777099}@media(prefers-contrast:more){.ds-toolbar{outline:1px solid #77777099}}@media(prefers-reduced-motion:reduce){.ds-tool{transition-duration:.001ms;}}"
+    },
+    {
+      "name": "可读菜单",
+      "kind": "custom",
+      "refersTo": "menu",
+      "description": "97% 中性填充保护密集文字，悬停和聚焦使用操作蓝。",
+      "html": "<div class=\"ds-menu\" role=\"menu\" aria-label=\"文件操作\"><button class=\"ds-menu-item\" role=\"menuitem\">复制<span class=\"ds-shortcut\">⌘ C</span></button><button class=\"ds-menu-item\" role=\"menuitem\">粘贴<span class=\"ds-shortcut\">⌘ V</span></button></div>",
+      "css": ".ds-menu{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);padding:5px;min-width:230px;max-width:340px;border-radius:10px;background:var(--menu-fill,rgba(249,248,245,.97));backdrop-filter:blur(30px) saturate(.9);-webkit-backdrop-filter:blur(30px) saturate(.9);box-shadow:var(--floating-shadow,0 10px 36px #19161330);color:var(--ink,#272521)}.ds-menu-item{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);font-size:12px;line-height:1.5;display:flex;align-items:center;gap:9px;width:100%;min-height:30px;padding:7px 9px;text-align:left;border:0;border-radius:5px;background:none;color:inherit;cursor:default;transition:background-color .12s ease-out,color .12s ease-out;}.ds-shortcut{margin-left:auto;font-size:11px;color:var(--secondary,#555049)}.ds-menu-item:hover:not(:disabled),.ds-menu-item:focus-visible{background:var(--accent,#006cdd);color:#fff}.ds-menu-item:hover:not(:disabled) .ds-shortcut,.ds-menu-item:focus-visible .ds-shortcut{color:#fff}.ds-menu-item:focus-visible{outline:3px solid #2687edb3;outline-offset:2px;}.ds-menu-item:disabled{opacity:.32}:host-context([data-theme=dark]) .ds-menu{background:var(--menu-fill,rgba(49,49,45,.97));box-shadow:var(--floating-shadow,0 10px 36px #0007)}:host-context([data-transparency=reduced]) .ds-menu{background:#efeeea;backdrop-filter:none;-webkit-backdrop-filter:none}:host-context([data-transparency=reduced][data-theme=dark]) .ds-menu{background:#383833}@media(prefers-reduced-transparency:reduce){.ds-menu{background:#efeeea;backdrop-filter:none;-webkit-backdrop-filter:none}:host-context([data-theme=dark]) .ds-menu{background:#383833}}@media(prefers-reduced-motion:reduce){.ds-menu-item{transition-duration:.001ms;}}"
+    },
+    {
+      "name": "文件内容与吸顶表头",
+      "kind": "custom",
+      "refersTo": "file-content",
+      "description": "透明表头共享 32% 内容材质；行裁切保留表头区域，减少透明度仅改内容底。列表左右贴齐，行端无圆角；片段展示静止状态。",
+      "html": "<div class=\"ds-content-demo\"><div class=\"ds-content-tabs\" role=\"tablist\" aria-label=\"目录标签示例\"><button class=\"ds-content-tab\" role=\"tab\" aria-selected=\"true\">文稿</button></div><div class=\"ds-content-surface\"><div class=\"ds-list-scroll\"><table class=\"ds-content-list\" aria-label=\"共享内容与表头材质示例\"><thead><tr><th>名称</th><th>大小</th></tr></thead><tbody><tr tabindex=\"0\" aria-selected=\"true\"><td>拍摄清单.md</td><td>2 KB</td></tr><tr tabindex=\"0\" aria-selected=\"false\"><td>行程参考.pdf</td><td>1.8 MB</td></tr></tbody></table></div></div></div>",
+      "css": ".ds-content-demo{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);color:var(--ink,#272521)}.ds-content-tabs{height:34px;display:flex}.ds-content-tab{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);height:34px;padding:0 10px;border:0;border-radius:8px 8px 0 0;font-size:11px;color:var(--ink,#272521);cursor:default}.ds-content-surface,.ds-content-tab{background:var(--content,rgba(241,240,237,.32));backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px)}.ds-list-scroll{overflow:auto;padding:0 0 18px;scroll-padding-top:36px}.ds-content-list{width:100%;border-collapse:separate;border-spacing:0;table-layout:fixed;font-size:13px;line-height:1.5}.ds-content-list thead{position:sticky;top:0;z-index:2;background:var(--content-header,transparent)}.ds-content-list tbody{clip-path:inset(var(--list-scroll-offset,0px) 0 0)}.ds-content-list th{height:36px;padding:6px 10px 0;background:transparent;border:0;color:var(--secondary,#555049);font-size:11px;font-weight:400;text-align:left}.ds-content-list td{height:32px;padding:3px 10px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ds-content-list td:first-child{border-radius:0}.ds-content-list td:last-child{border-radius:0;text-align:right;font-variant-numeric:tabular-nums}.ds-content-list tr:nth-child(even):not([aria-selected=true]) td{background:#27252103}.ds-content-list tr:hover:not([aria-selected=true]) td{background:var(--hover,rgba(30,30,27,.065))}.ds-content-list tr[aria-selected=true] td{background:var(--accent,#006cdd);color:#fff}.ds-content-tab:focus-visible,.ds-content-list tr:focus-visible{outline:3px solid #2687edb3;outline-offset:-2px}:host-context([data-theme=dark]) .ds-content-surface,:host-context([data-theme=dark]) .ds-content-tab{background:var(--content,rgba(35,35,32,.32))}:host-context([data-theme=dark]) .ds-content-list tr:nth-child(even):not([aria-selected=true]) td{background:#ffffff03}:host-context([data-transparency=reduced]) .ds-content-surface,:host-context([data-transparency=reduced]) .ds-content-tab{background:#f1f0ed;backdrop-filter:none;-webkit-backdrop-filter:none}:host-context([data-transparency=reduced][data-theme=dark]) .ds-content-surface,:host-context([data-transparency=reduced][data-theme=dark]) .ds-content-tab{background:#232320}:host-context([data-transparency=reduced]) .ds-content-list thead{background:transparent}@media(prefers-reduced-transparency:reduce){.ds-content-surface,.ds-content-tab{background:#f1f0ed;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}:host-context([data-theme=dark]) .ds-content-surface,:host-context([data-theme=dark]) .ds-content-tab{background:#232320}.ds-content-list thead{background:transparent}}@media(max-width:600px){.ds-list-scroll{scroll-padding-top:35px}.ds-content-list th{height:35px;padding-top:5px;padding-left:6px;padding-right:5px}.ds-content-list td{padding-left:6px;padding-right:5px}}.ds-content-demo.ds-split-mode .ds-list-scroll{scroll-padding-top:30px}.ds-content-demo.ds-split-mode .ds-content-list th{height:30px;padding-top:0}"
+    },
+    {
+      "name": "设置内嵌表单",
+      "kind": "input",
+      "refersTo": "settings-group",
+      "description": "已磨砂的内容面上的薄填充分组，带内缩分隔、真实 select 与 30 × 18 px 开关；样本展示控件状态，不接入产品设置。",
+      "html": "<div class=\"ds-settings-form\"><section class=\"ds-settings-form-group\" aria-label=\"浏览与辅助功能\"><div class=\"ds-settings-form-row\"><label for=\"ds-setting-density\">列表密度</label><span class=\"ds-settings-popup\"><select id=\"ds-setting-density\"><option>舒适</option><option>紧凑</option></select><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m8 9 4-4 4 4M8 15l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></div><div class=\"ds-settings-form-row\"><label for=\"ds-setting-transparency\">减少透明度<small id=\"ds-settings-transparency-note\">使用更实的背景，让内容更容易辨认。</small></label><input class=\"ds-settings-switch\" id=\"ds-setting-transparency\" type=\"checkbox\" role=\"switch\" aria-describedby=\"ds-settings-transparency-note\"></div></section></div>",
+      "css": ".ds-settings-form{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);background:var(--settings-pane,rgba(241,240,237,.14));color:var(--ink,#272521);padding:12px 24px 16px;}.ds-settings-form-group{margin:0;padding:0;border-radius:12px;background:var(--settings-group,rgba(255,255,255,.06));}.ds-settings-form-row{display:flex;align-items:center;gap:16px;min-height:46px;margin:0 12px;padding:9px 0;font-size:13px;line-height:1.5;}.ds-settings-form-row+.ds-settings-form-row{border-top:1px solid var(--settings-separator,rgba(35,35,32,.09));}.ds-settings-form-row>label{flex:1;min-width:0;}.ds-settings-form-row small{display:block;margin-top:3px;font-size:11px;line-height:1.5;color:var(--secondary,#555049);}.ds-settings-popup{position:relative;display:inline-flex;align-items:center;margin-left:auto;max-width:55%;min-width:65px;flex-shrink:0;border-radius:5px;}.ds-settings-popup select{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);width:100%;min-width:0;appearance:none;-webkit-appearance:none;border:0;border-radius:5px;background:transparent;color:var(--secondary,#555049);padding:4px 24px 4px 7px;font-size:12px;line-height:20px;text-align:right;text-overflow:ellipsis;cursor:default;}.ds-settings-popup select:hover{background:var(--settings-popup-hover,rgba(90,89,84,.09));}.ds-settings-popup select:active{background:var(--hover,rgba(30,30,27,.065));}.ds-settings-popup option{background:var(--surface,#fff);color:var(--ink,#272521);}.ds-settings-popup svg{position:absolute;right:4px;width:15px;height:15px;pointer-events:none;color:var(--secondary,#555049);}.ds-settings-switch{appearance:none;width:30px;height:18px;flex:none;border:0;border-radius:12px;position:relative;margin:0;padding:0;background:var(--settings-switch-off,#8b8b86);transition:background .12s;}.ds-settings-switch::before{content:\"\";position:absolute;left:2px;top:2px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 2px #0002;transition:transform .12s;}.ds-settings-switch:checked{background:var(--accent,#006cdd);}.ds-settings-switch:checked::before{transform:translateX(12px);}.ds-settings-form select:focus-visible,.ds-settings-switch:focus-visible{outline:3px solid var(--focus,#2687edb3);outline-offset:2px;}@media(prefers-contrast:more){.ds-settings-form-group{outline:1px solid var(--settings-high-contrast-separator,#77777088);}.ds-settings-form-row+.ds-settings-form-row{border-color:var(--settings-high-contrast-separator,#77777088);}.ds-settings-popup{box-shadow:inset 0 0 0 1px var(--settings-high-contrast-separator,#77777088);}}@media(prefers-reduced-transparency:reduce){.ds-settings-form{background:var(--reduced-content,#f1f0ed);}}@media(prefers-reduced-motion:reduce){.ds-settings-switch,.ds-settings-switch::before{transition-duration:.001ms;}}"
+    },
+    {
+      "name": "设置外观单选",
+      "kind": "input",
+      "refersTo": "settings-appearance-thumbnail",
+      "description": "浅色、深色与自动外观的真实 radio；选中环与焦点环分开，小型示意图不定义产品品牌色，样本不会修改系统外观。",
+      "html": "<section class=\"ds-appearance-group\" aria-label=\"外观模式\"><fieldset class=\"ds-appearance-picker\"><legend>外观</legend><div class=\"ds-appearance-choices\"><label class=\"ds-appearance-choice\"><input type=\"radio\" name=\"ds-settings-appearance\" value=\"light\" checked><span class=\"ds-appearance-thumbnail ds-appearance-light\" aria-hidden=\"true\"><span class=\"ds-mini-window ds-mini-light\"><span class=\"ds-mini-sidebar\"><i></i><i></i><i></i></span><span class=\"ds-mini-toolbar\"></span><span class=\"ds-mini-files\"><i></i><i></i><i></i></span></span></span><span class=\"ds-appearance-name\">浅色</span></label><label class=\"ds-appearance-choice\"><input type=\"radio\" name=\"ds-settings-appearance\" value=\"dark\"><span class=\"ds-appearance-thumbnail ds-appearance-dark\" aria-hidden=\"true\"><span class=\"ds-mini-window ds-mini-dark\"><span class=\"ds-mini-sidebar\"><i></i><i></i><i></i></span><span class=\"ds-mini-toolbar\"></span><span class=\"ds-mini-files\"><i></i><i></i><i></i></span></span></span><span class=\"ds-appearance-name\">深色</span></label><label class=\"ds-appearance-choice\"><input type=\"radio\" name=\"ds-settings-appearance\" value=\"system\"><span class=\"ds-appearance-thumbnail ds-appearance-system\" aria-hidden=\"true\"><span class=\"ds-mini-window ds-mini-light\"><span class=\"ds-mini-sidebar\"><i></i><i></i><i></i></span><span class=\"ds-mini-toolbar\"></span><span class=\"ds-mini-files\"><i></i><i></i><i></i></span></span><span class=\"ds-mini-window ds-mini-dark ds-mini-half\"><span class=\"ds-mini-sidebar\"><i></i><i></i><i></i></span><span class=\"ds-mini-toolbar\"></span><span class=\"ds-mini-files\"><i></i><i></i><i></i></span></span></span><span class=\"ds-appearance-name\">自动</span></label></div></fieldset><p class=\"ds-appearance-note\">选择“自动”时，外观跟随系统变化。</p></section>",
+      "css": ".ds-appearance-group{font-family:var(--font,-apple-system,BlinkMacSystemFont,\"SF Pro Text\",\"PingFang SC\",sans-serif);color:var(--ink,#272521);background:var(--settings-group,rgba(255,255,255,.06));border-radius:12px;margin:0;padding:0;}.ds-appearance-picker{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;border:0;margin:0;padding:16px 14px 8px;min-width:0;position:relative;}.ds-appearance-picker legend{float:left;padding:0;font-size:13px;line-height:20px;}.ds-appearance-choices{display:flex;gap:16px;justify-content:flex-end;}.ds-appearance-choice{display:flex;flex-direction:column;align-items:center;gap:7px;position:relative;}.ds-appearance-choice>input{position:absolute;width:1px;height:1px;opacity:0;margin:0;}.ds-appearance-thumbnail{width:84px;height:56px;border-radius:6px;background:#cbbeb1 url(\"data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201600%201100%22%20preserveAspectRatio%3D%22xMidYMid%20slice%22%3E%0A%3Cdefs%3E%0A%3ClinearGradient%20id%3D%22base%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23b1a38f%22%2F%3E%3Cstop%20offset%3D%22.45%22%20stop-color%3D%22%23e9ddcb%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23f4eee1%22%2F%3E%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22fold%22%20x1%3D%220%22%20y1%3D%221%22%20x2%3D%221%22%20y2%3D%22.1%22%3E%3Cstop%20stop-color%3D%22%23ad765c%22%2F%3E%3Cstop%20offset%3D%22.28%22%20stop-color%3D%22%23d9b795%22%2F%3E%3Cstop%20offset%3D%22.53%22%20stop-color%3D%22%23f2e5d2%22%2F%3E%3Cstop%20offset%3D%22.8%22%20stop-color%3D%22%23d4c3aa%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%2398866e%22%2F%3E%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22rim%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%22.7%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%23f9f5ec%22%2F%3E%3Cstop%20offset%3D%22.48%22%20stop-color%3D%22%23e8d9c4%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23c4a888%22%2F%3E%3C%2FlinearGradient%3E%0A%3ClinearGradient%20id%3D%22light%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%22.7%22%3E%3Cstop%20stop-color%3D%22%23fbf8ef%22%2F%3E%3Cstop%20offset%3D%22.65%22%20stop-color%3D%22%23e6dac9%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23b8a58c%22%2F%3E%3C%2FlinearGradient%3E%0A%3C%2Fdefs%3E%0A%3Crect%20width%3D%221600%22%20height%3D%221100%22%20fill%3D%22url%28%23base%29%22%2F%3E%0A%3Cpath%20d%3D%22M-240-300C520-300%201020-100%201050%20290S520%20590%20400%20850S620%201260%201000%201330H-240Z%22%20fill%3D%22url%28%23fold%29%22%2F%3E%0A%3Cpath%20d%3D%22M440-210C1020-120%201380%2060%201240%20410S640%20610%20690%20940S1330%201390%201810%201260V-210Z%22%20fill%3D%22url%28%23rim%29%22%2F%3E%0A%3Cpath%20d%3D%22M930-160C1450-70%201540%20240%201400%20530S1040%20730%201100%201030S1510%201230%201770%201170V-160Z%22%20fill%3D%22url%28%23light%29%22%2F%3E%0A%3C%2Fsvg%3E\") center/cover;position:relative;display:block;overflow:hidden;box-shadow:inset 0 0 0 .5px #0002;}.ds-appearance-dark{background-color:#3d454c;background-blend-mode:multiply;}.ds-appearance-name{font-size:11px;line-height:16px;color:var(--secondary,#555049);}.ds-appearance-choice:has(input:checked) .ds-appearance-thumbnail{outline:3px solid var(--accent,#006cdd);outline-offset:2px;}.ds-appearance-choice:has(input:checked) .ds-appearance-name{color:var(--ink,#272521);font-weight:600;}.ds-appearance-choice:has(input:focus-visible){outline:3px solid var(--focus,#2687edb3);outline-offset:5px;border-radius:5px;}.ds-appearance-choice:hover .ds-appearance-thumbnail{filter:brightness(1.04);}.ds-appearance-choice:active .ds-appearance-thumbnail{filter:brightness(.94);}.ds-mini-window{position:absolute;display:block;inset:15px -4px -3px 12px;border-radius:5px;background:#f2f1ee;box-shadow:0 2px 5px #0003,inset 0 0 0 .5px #fff9;overflow:hidden;}.ds-mini-sidebar{position:absolute;inset:0 auto 0 0;width:18px;background:#dedbd7;padding:12px 3px 0;}.ds-mini-sidebar i{display:block;height:3px;margin-bottom:3px;border-radius:1px;background:#bcbab6;}.ds-mini-sidebar i:first-child{background:#0878e5;}.ds-mini-toolbar{position:absolute;height:8px;top:0;left:18px;right:0;background:#e9e8e5;}.ds-mini-files{position:absolute;left:23px;top:13px;right:7px;}.ds-mini-files i{display:block;background:#d1cfca;height:3px;margin-bottom:4px;border-radius:1px;}.ds-mini-files i:nth-child(2){width:72%;}.ds-mini-dark{background:#30312f;box-shadow:0 2px 5px #0003,inset 0 0 0 .5px #fff3;}.ds-mini-dark .ds-mini-sidebar{background:#444540;}.ds-mini-dark .ds-mini-sidebar i{background:#73746e;}.ds-mini-dark .ds-mini-sidebar i:first-child{background:#0878e5;}.ds-mini-dark .ds-mini-toolbar{background:#383936;}.ds-mini-dark .ds-mini-files i{background:#73746e;}.ds-mini-half{clip-path:inset(0 0 0 50%);}.ds-appearance-note{margin:0;padding:6px 14px 12px;color:var(--secondary,#555049);font-size:11px;line-height:1.5;}@media(max-width:650px){.ds-appearance-picker{flex-direction:column;gap:12px;}.ds-appearance-choices{width:100%;justify-content:space-between;gap:10px;}.ds-appearance-thumbnail{width:69px;height:49px;}}@media(max-width:520px){.ds-appearance-picker{flex-direction:row;gap:12px;}.ds-appearance-choices{width:auto;gap:12px;}.ds-appearance-thumbnail{width:67px;height:47px;}}@media(max-width:390px){.ds-appearance-picker{flex-direction:column;}.ds-appearance-choices{width:100%;justify-content:space-between;}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "原生 macOS 文件窗口",
+    "overview": "MyFolds 是已确认的品牌。用户指定 macOS 原生、简洁、高级、磨砂质感，并以 macOS 27 为适配目标。v0.6 延续实际浏览的 Apple macOS 宣传页面所校准的窗口比例、控件分组和侧栏关系：系统字体与近黑 SF Symbols 为主。窗口外的设计预览默认使用动态 RGB 背景，保留暖色壁纸模式；不固定为单蓝色或全暖色，允许用户指定 RGB 色彩来观察材质。\n\n窗口由通高侧栏、单层工具栏、稳定文件内容和底部路径栏构成。玻璃用于关联操作组；默认列表、不预选文件且关闭预览，多个真实标签才显示标签行。内容区使用半透明暖雾灰和背景模糊，吸顶表头保持透明并共享内容区的单层材质，前景文字和图片保持清晰。外围窗口与控件保留玻璃层次。本文提取当前 HTML、style.css 对 components.css、preview-background.css 与 settings.css 的最终级联，以及 app.js、preview-background.js 与 settings.js；RGB 控制仅属于设计预览，不是文件管理产品功能。网页材质、窗口控制与文件数据均为模拟，不表示已实现系统 Liquid Glass、真实文件访问或完成原生验证。\n\n偏好设置参考本机 macOS 系统设置的分组行和外观选择关系，使用独立的非模态窗口，提供外观、打开方式与快捷键三类内容。更改即时生效，仅保留在本次演示的内存中；“自动”跟随系统外观，打开方式只改变 MyFolds 内的演示选择。设置窗口复用主窗口的玻璃模糊、细亮边与投影，侧栏与内容面用薄叠色补偿背后的既有磨砂；内容独立滚动，主文件窗口仍可操作。",
+    "keyCharacteristics": [
+      "194 px 通高磨砂侧栏、64 px 单层工具栏、38 px 底部完整路径与状态。",
+      "默认列表与按需预览；多个真实标签才显示 34 px 标签行。",
+      "近黑单色符号、少量玻璃功能组、半透明雾灰内容面与共享材质的透明表头；窗口外提供 RGB 材质预览。",
+      "独立滚动、窄窗侧栏覆盖层，以及浅深色和辅助功能退化样式。",
+      "独立的非模态设置窗口，复用主窗口的玻璃材质；内嵌分组、左侧标签与右侧真实控件，窄窗改为横向分类。"
+    ],
+    "rules": [
+      {
+        "name": "The Selection Rule",
+        "body": "产品控件中的操作蓝用于选择、焦点和明确主操作；工具符号近黑，导航符号使用中性灰。剪切和错误同时使用图标或文字。",
+        "section": "colors"
+      },
+      {
+        "name": "The File Name Priority Rule",
+        "body": "窗口变窄时先收起搜索和辅助列，再折叠侧栏；文件名保留可扫描的正文层级。",
+        "section": "typography"
+      },
+      {
+        "name": "The Content Stability Rule",
+        "body": "内容区和活动标签适量透出背景色，前景文字与媒体保持清晰；吸顶表头始终透明，共享内容层，通过裁切行内容防止滚动行进入表头区域。减少透明度时，内容与活动标签恢复实体底并移除背景模糊；表头仍透明，由实体内容层提供背景。菜单、路径建议与对话框继续使用稳固填充。",
+        "section": "elevation"
+      },
+      {
+        "name": "The Functional Group Rule",
+        "body": "关联操作共享玻璃功能组，组间以留白分隔；不要给每个普通图标分别套一个玻璃外壳。",
+        "section": "elevation"
+      },
+      {
+        "name": "The Settings Material Rule",
+        "body": "设置窗口复用主窗口的 32 px 模糊、1.25 饱和度、18 px 圆角、投影与细亮边。设置覆盖已磨砂的主窗口，因此侧栏和内容面使用轻薄的补偿叠色，保留环境透色；这些局部值不替换主窗口的 32% 内容材质。内嵌分组不加独立模糊；减少透明度时使用实体底，提高对比度时增强分组与下拉框边界。",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do 使用 MyFolds 名称、系统字体、SF Symbols 语义和熟悉的桌面操作层级。",
+      "Do 保持完整路径常驻底部，预览按需开启，单标签时隐藏标签行。",
+      "Do 按功能组织玻璃组，让内容适量透色并保持表头清晰，在不同 RGB 背景、浅深色和减少透明度状态下检查可读性。",
+      "Do 让侧栏与文件区独立滚动，窄窗口仍保留侧栏入口及可见键盘焦点。",
+      "Do 让设置即时生效并明确演示范围，使用真实选择控件、可见焦点和独立滚动。"
+    ],
+    "donts": [
+      "Don't 把网页材质、合成文件、浏览器尺寸或局部检查写成已实现的系统 Liquid Glass 与原生验证。",
+      "Don't 把预览固定为单蓝色或全暖色，也不把 RGB 预览色扩展为产品品牌色；文件项目本身不另套玻璃卡片。",
+      "Don't 为单个目录常驻额外的路径工具栏、空预览栏或假标签行。",
+      "Don't 用 Unicode 字形或 emoji 代替 SF Symbols，也不把 Apple 系统图标当作 MyFolds 原创品牌素材。",
+      "Don't 把设置内存状态写成持久偏好，或把 MyFolds 内的打开方式写成已更改 Finder 系统默认应用。"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>径 · macOS 文件管理器设计方案</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="review-header">
+    <a class="proposal-brand" href="index.html" aria-label="径，设计原型首页"><span class="brand-mark" data-icon="route"></span><strong>径</strong><span class="brand-divider"></span><span>macOS 文件管理器</span></a>
+    <div class="review-actions"><span class="demo-label">交互设计稿 · 示例文件</span><a class="text-link" href="design.html">阅读设计方案 <span data-icon="arrowUpRight"></span></a></div>
+  </header>
+
+  <main>
+    <section class="app-window" aria-label="文件管理器交互原型">
+      <header class="window-bar">
+        <div class="window-identity"><span class="traffic-lights" aria-hidden="true"><i></i><i></i><i></i></span><span class="window-name">径</span></div>
+        <div class="tabs" role="tablist" aria-label="打开的文件夹">
+          <button class="tab active" role="tab" aria-selected="true" data-folder="/Users/demo/Pictures/旅途精选"><span data-icon="folder"></span>旅途精选</button>
+          <button class="tab" role="tab" aria-selected="false" data-folder="/Users/demo/Downloads"><span data-icon="download"></span>下载</button>
+          <button class="icon-button add-tab" aria-label="打开新标签页" title="打开新标签页" data-action="new-tab"><span data-icon="plus"></span></button>
+        </div>
+        <div class="window-tools"><button class="icon-button" id="theme-button" data-action="theme" aria-label="切换深色外观" title="切换深色外观"><span data-icon="moon"></span></button><button class="icon-button" data-action="help" aria-label="快捷键与使用帮助" title="快捷键与使用帮助"><span data-icon="help"></span></button></div>
+      </header>
+
+      <div class="app-body">
+        <aside class="sidebar" aria-label="常用位置">
+          <div class="sidebar-group"><p class="sidebar-title">个人收藏</p>
+            <button class="nav-item" data-folder="/Users/demo/Recent"><span data-icon="clock"></span><span>最近使用</span></button>
+            <button class="nav-item" data-folder="/Users/demo/Desktop"><span data-icon="desktop"></span><span>桌面</span></button>
+            <button class="nav-item" data-folder="/Users/demo/Downloads"><span data-icon="download"></span><span>下载</span><small>3</small></button>
+            <button class="nav-item" data-folder="/Users/demo/Documents"><span data-icon="document"></span><span>文稿</span></button>
+            <button class="nav-item" data-folder="/Users/demo/Pictures"><span data-icon="image"></span><span>图片</span></button>
+          </div>
+          <div class="sidebar-group"><p class="sidebar-title">工作位置</p>
+            <button class="nav-item active" data-folder="/Users/demo/Pictures/旅途精选"><span data-icon="folderStar"></span><span>旅途精选</span></button>
+            <button class="nav-item" data-folder="/Users/demo/Pictures/旅途精选/导出"><span data-icon="folder"></span><span>导出</span></button>
+            <button class="nav-item" data-folder="/Users/demo/Projects"><span data-icon="code"></span><span>项目文件</span></button>
+          </div>
+          <div class="sidebar-group"><p class="sidebar-title">位置</p>
+            <button class="nav-item" data-folder="/Users/demo"><span data-icon="drive"></span><span>Macintosh HD</span></button>
+            <button class="nav-item" data-folder="/Volumes/工作硬盘"><span data-icon="external"></span><span>工作硬盘</span><span class="device-dot"></span></button>
+          </div>
+          <div class="sidebar-bottom"><button class="nav-item" data-action="trash-view"><span data-icon="trash"></span><span>废纸篓</span></button><button class="nav-item" data-action="settings"><span data-icon="settings"></span><span>偏好设置</span></button><div class="storage-summary"><div><span>演示磁盘</span><span>可用 256 GB</span></div><div class="storage-meter"><i></i></div></div></div>
+        </aside>
+
+        <div class="workspace">
+          <div class="navigation-bar">
+            <div class="navigation-buttons"><button class="icon-button" id="back-button" data-action="back" aria-label="后退" title="后退"><span data-icon="chevronLeft"></span></button><button class="icon-button" data-action="up" aria-label="上一级" title="上一级 ⌘↑"><span data-icon="arrowUp"></span></button></div>
+            <div class="address-wrap" id="address-wrap">
+              <button class="address-display" id="address-display" data-action="edit-path" aria-label="编辑当前路径，快捷键 Command L"><span data-icon="folder"></span><span id="path-text"></span><kbd>⌘ L</kbd></button>
+              <form class="address-form" id="address-form" hidden><span data-icon="folder"></span><input id="path-input" aria-label="文件或文件夹路径" autocomplete="off" spellcheck="false"><button class="icon-button" type="submit" aria-label="前往路径"><span data-icon="arrowRight"></span></button></form>
+              <div class="path-suggestions" id="path-suggestions" hidden></div>
+            </div>
+            <button class="icon-button copy-path" data-action="copy-path" aria-label="复制当前完整路径" title="复制当前完整路径"><span data-icon="copy"></span></button>
+            <label class="search-field"><span data-icon="search"></span><input id="search-input" placeholder="搜索此文件夹" aria-label="搜索当前文件夹"><kbd>⌘ F</kbd></label>
+          </div>
+
+          <div class="action-bar">
+            <div class="primary-actions"><button class="action-button" id="cut-button" data-action="cut" title="剪切 ⌘X"><span data-icon="scissors"></span><span>剪切</span></button><button class="action-button" id="copy-button" data-action="copy" title="复制 ⌘C"><span data-icon="copy"></span><span>复制</span></button><button class="action-button" id="paste-button" data-action="paste" title="粘贴 ⌘V" disabled><span data-icon="clipboard"></span><span>粘贴</span></button><span class="separator"></span><button class="action-button" data-action="new-folder" title="新建文件夹 ⇧⌘N"><span data-icon="folderPlus"></span><span class="optional-label">新建文件夹</span></button><button class="icon-button" id="more-button" data-action="more" aria-label="更多文件操作" title="更多文件操作"><span data-icon="more"></span></button></div>
+            <div class="view-actions"><div class="segmented" role="group" aria-label="文件视图"><button class="icon-button selected" id="list-button" data-action="list" aria-label="列表视图" aria-pressed="true"><span data-icon="list"></span></button><button class="icon-button" id="grid-button" data-action="grid" aria-label="图标视图" aria-pressed="false"><span data-icon="grid"></span></button></div><span class="separator"></span><button class="action-button" id="split-button" data-action="split" aria-pressed="false"><span data-icon="columns"></span><span>双栏</span></button><button class="icon-button selected" id="preview-button" data-action="preview-toggle" aria-label="显示或隐藏预览区" aria-pressed="true" title="显示或隐藏预览区"><span data-icon="sidebarRight"></span></button></div>
+          </div>
+
+          <div class="content-area" id="content-area">
+            <div class="browser-zone" id="browser-zone">
+              <div class="file-panes" id="file-panes"><section class="file-pane active-pane" id="main-pane" aria-label="文件浏览区"></section><section class="file-pane target-pane" id="target-pane" aria-label="右侧文件浏览区" hidden></section></div>
+              <div class="clipboard-shelf" id="clipboard-shelf" hidden></div>
+              <div class="task-shelf" id="task-shelf" aria-live="polite" hidden></div>
+            </div>
+            <aside class="inspector" id="inspector" aria-label="所选文件预览"></aside>
+          </div>
+          <footer class="status-bar"><span id="status-text"></span><div><span class="status-dot"></span><span id="status-right">文件保存在本机</span><button class="status-task-button" data-action="tasks"><span data-icon="activity"></span><span id="task-count">任务</span></button></div></footer>
+        </div>
+      </div>
+      <div class="popover" id="popover" hidden></div>
+      <div class="toast" id="toast" role="status" hidden></div>
+    </section>
+
+    <section class="scenario-strip" aria-label="设计场景演示">
+      <div class="scenario-description"><strong id="scenario-title">文件就在手边</strong><p id="scenario-description">选中文件即可预览。地址栏、剪切和粘贴始终在眼前。</p></div>
+      <div class="scenario-buttons"><button class="scenario-button active" data-scene="browse">日常浏览</button><button class="scenario-button" data-scene="path">路径跳转</button><button class="scenario-button" data-scene="move">剪切与移动</button><button class="scenario-button" data-scene="media">媒体预览</button><button class="scenario-button" data-scene="open">打开方式</button><button class="scenario-button" data-scene="archive">压缩包</button><button class="scenario-button" data-scene="states">异常状态</button></div>
+    </section>
+  </main>
+  <footer class="review-footer"><span>名称与界面为设计提案 · 示例操作不会读写你的文件</span><button class="text-link" data-action="reset">重置演示 <span data-icon="refresh"></span></button></footer>
+  <dialog id="dialog" aria-labelledby="dialog-title"></dialog>
+  <script src="app.js"></script>
+</body>
+</html>

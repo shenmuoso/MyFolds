@@ -1,0 +1,86 @@
+{
+  "features": [
+    "refractivity",
+    "specular-location"
+  ],
+  "fill": {
+    "automatic-gradient": "extended-srgb:0.89,0.905,0.93,1.0"
+  },
+  "groups": [
+    {
+      "name": "03 · Frosted leaf",
+      "layers": [
+        {
+          "image-name": "02-fold-right.svg",
+          "name": "03 · Frosted leaf"
+        }
+      ],
+      "blur-material": 0.12,
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.85,
+        "depth": 0.32
+      },
+      "specular": "inside",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.24
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.92
+      }
+    },
+    {
+      "name": "02 · Cyan leaf",
+      "layers": [
+        {
+          "image-name": "01-fold-left.svg",
+          "name": "02 · Cyan leaf"
+        }
+      ],
+      "blur-material": 0.12,
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.85,
+        "depth": 0.32
+      },
+      "specular": "inside",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.24
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.86
+      }
+    },
+    {
+      "name": "01 · Rear fold",
+      "layers": [
+        {
+          "image-name": "03-fold-return.svg",
+          "name": "01 · Rear fold"
+        }
+      ],
+      "blur-material": 0.08,
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.8,
+        "depth": 0.26
+      },
+      "specular": "inside",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.24
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.8
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}

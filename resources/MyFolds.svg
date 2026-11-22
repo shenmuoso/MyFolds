@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+<defs>
+  <linearGradient id="body" x1="0.15" y1="0" x2="0.85" y2="1">
+    <stop stop-color="#52e2ff"/><stop offset="0.42" stop-color="#0bbcf1"/><stop offset="1" stop-color="#1680dc"/>
+  </linearGradient>
+  <linearGradient id="rim" x1="0.15" y1="0" x2="0.7" y2="1">
+    <stop stop-color="#ffffff" stop-opacity="0.90"/><stop offset="0.40" stop-color="#b5f7ff" stop-opacity="0.15"/><stop offset="1" stop-color="#105cab" stop-opacity="0.50"/>
+  </linearGradient>
+  <linearGradient id="pane" x1="0.2" y1="0" x2="0.85" y2="1">
+    <stop stop-color="#ffffff" stop-opacity="0.98"/><stop offset="0.52" stop-color="#f0fbff" stop-opacity="0.94"/><stop offset="1" stop-color="#c1edff" stop-opacity="0.80"/>
+  </linearGradient>
+  <linearGradient id="fold" x1="0" y1="0" x2="1" y2="0.7">
+    <stop stop-color="#86d8f4" stop-opacity="0.5"/><stop offset="0.6" stop-color="#effdff" stop-opacity="0.95"/><stop offset="1" stop-color="#ffffff"/>
+  </linearGradient>
+  <linearGradient id="shine" x1="0" y1="0" x2="0" y2="1">
+    <stop stop-color="#ffffff" stop-opacity="0.28"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#03508e" flood-opacity="0.22"/></filter>
+  <filter id="paneShadow" x="-20%" y="-10%" width="140%" height="130%"><feDropShadow dx="-5" dy="10" stdDeviation="8" flood-color="#007cb3" flood-opacity="0.15"/></filter>
+</defs>
+<!-- Original MyFolds geometry: a folded frosted pane, two faces and a shared smile. -->
+<rect x="100" y="100" width="824" height="824" rx="190" fill="url(#body)" filter="url(#shadow)"/>
+<rect x="104" y="104" width="816" height="816" rx="186" fill="none" stroke="url(#rim)" stroke-width="8"/>
+<path d="M291 109H731C834 109 915 192 915 295V423C737 338 403 331 109 405V295C109 192 191 109 291 109Z" fill="url(#shine)"/>
+<path d="M600 168H735C812 168 857 214 857 295V725C857 811 811 858 730 858H615C561 858 538 830 534 773L519 563H446C425 563 418 548 429 529L532 237C547 190 565 168 600 168Z" fill="url(#pane)" filter="url(#paneShadow)"/>
+<path d="M532 237L429 529C418 548 425 563 446 563H519L535 450L487 448Z" fill="url(#fold)"/>
+<path d="M606 172H735C810 172 853 217 853 295V724C853 805 809 853 730 853H615" fill="none" stroke="#ffffff" stroke-opacity="0.72" stroke-width="5" stroke-linecap="round"/>
+<path d="M533 773L519 563H447" fill="none" stroke="#c4f2ff" stroke-opacity="0.85" stroke-width="4" stroke-linecap="round"/>
+<g fill="none" stroke="#123247" stroke-linecap="round">
+  <path d="M325 381V425" stroke-width="27"/>
+  <path d="M690 381V425" stroke-width="27"/>
+  <path d="M291 632C419 742 604 751 733 636" stroke-width="27"/>
+</g>
+</svg>

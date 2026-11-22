@@ -1,0 +1,33 @@
+/* Preview-only desktop controls; the file manager keeps its own materials. */
+body[data-preview-background=rgb] .desktop-ambient { background-blend-mode:luminosity; }
+.background-toggle { display:inline-flex; align-items:center; gap:6px; height:30px; padding:0 9px; border-radius:15px; color:#4b443b; font-size:12px; white-space:nowrap; }
+.background-toggle:hover,.background-toggle[aria-expanded=true] { background:#ffffff50; }
+.background-toggle .icon { width:11px; height:11px; }
+.background-swatch { width:13px; height:13px; flex:none; border-radius:50%; background:var(--preview-chip,#da97a6); box-shadow:inset 0 0 0 .5px #27252130; }
+.preview-background-panel { position:fixed; inset:58px 40px auto auto; width:280px; max-width:calc(100vw - 32px); margin:0; padding:18px; border:0; border-radius:13px; background:var(--menu-fill); color:var(--ink); box-shadow:var(--floating-shadow); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px); }
+.preview-background-panel::backdrop { background:transparent; }
+.preview-background-panel h2 { margin:0 0 13px; font-size:13px; font-weight:600; }
+.background-modes { display:flex; gap:2px; padding:3px; border-radius:8px; background:var(--hover); }
+.background-modes button { flex:1; min-height:28px; padding:4px 7px; border-radius:6px; color:var(--secondary); font-size:12px; }
+.background-modes button[aria-pressed=true] { background:var(--surface); color:var(--ink); box-shadow:0 1px 3px #00000012; }
+.background-playback { display:flex; align-items:center; justify-content:space-between; gap:8px; margin-top:14px; }
+.background-playback button { display:inline-flex; align-items:center; gap:6px; min-height:30px; margin-left:-5px; padding:4px 5px; border-radius:6px; font-size:12px; }
+.background-playback button:hover:not(:disabled),.background-presets button:hover { background:var(--hover); }
+.background-playback .icon { width:15px; height:15px; }
+.background-playback>span { font-size:11px; color:var(--secondary); white-space:nowrap; }
+.background-presets { display:flex; gap:10px; margin:8px 0 10px; }
+.background-presets button { display:inline-flex; align-items:center; justify-content:center; gap:7px; flex:1; min-height:28px; border-radius:6px; font-size:12px; }
+.background-presets i { display:block; width:14px; height:14px; border-radius:50%; background:var(--swatch); }
+.background-channel { display:grid; grid-template-columns:14px 1fr 28px; align-items:center; gap:12px; min-height:30px; font-size:12px; }
+.background-channel>span { color:var(--secondary); }
+.background-channel input { width:100%; min-width:0; margin:0; accent-color:var(--channel); }
+.background-channel output { font-size:11px; color:var(--secondary); text-align:right; font-variant-numeric:tabular-nums; }
+.preview-background-panel>p { margin:14px 0 0; font-size:11px; color:var(--secondary); }
+[data-theme=dark] .background-toggle { color:#d4d2ca; }
+[data-theme=dark] .background-toggle:hover,[data-theme=dark] .background-toggle[aria-expanded=true] { background:#ffffff18; }
+[data-theme=dark] .background-modes button[aria-pressed=true] { background:#ffffff20; }
+body[data-transparency=reduced] .preview-background-panel { backdrop-filter:none; -webkit-backdrop-filter:none; }
+@media(max-width:1190px) { .preview-background-panel { right:22px; } }
+@media(max-width:800px) { .review-header .demo-label { display:none; } .preview-background-panel { right:16px; } }
+@media(max-width:600px) { .preview-background-panel { top:51px; } .background-toggle { padding:0 6px; gap:5px; } }
+@media(prefers-reduced-transparency:reduce) { .preview-background-panel { backdrop-filter:none; -webkit-backdrop-filter:none; } }

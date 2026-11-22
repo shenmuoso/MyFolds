@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>MyFolds</string>
+	<key>CFBundleDisplayName</key>
+	<string>MyFolds</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.myfolds.app</string>
+	<key>CFBundleExecutable</key>
+	<string>MyFolds</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.1.11</string>
+	<key>CFBundleVersion</key>
+	<string>15</string>
+	<key>LSMinimumSystemVersion</key>
+	<string>27.0</string>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.utilities</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+	<key>NSHumanReadableCopyright</key>
+	<string>MyFolds 2026</string>
+	<key>NSDocumentsFolderUsageDescription</key>
+	<string>MyFolds 需要访问你选择的文稿，以浏览、预览和整理文件。</string>
+	<key>NSDesktopFolderUsageDescription</key>
+	<string>MyFolds 需要访问你选择的桌面，以浏览、预览和整理文件。</string>
+	<key>NSDownloadsFolderUsageDescription</key>
+	<string>MyFolds 需要访问你选择的下载目录，以浏览、预览和整理文件。</string>
+	<key>NSRemovableVolumesUsageDescription</key>
+	<string>MyFolds 需要访问你选择的外置磁盘，以浏览、复制和移动文件。</string>
+</dict>
+</plist>

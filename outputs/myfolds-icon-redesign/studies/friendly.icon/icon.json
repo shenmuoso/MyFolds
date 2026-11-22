@@ -1,0 +1,108 @@
+{
+  "features": [
+    "refractivity",
+    "specular-location"
+  ],
+  "fill": {
+    "automatic-gradient": "extended-srgb:0.89,0.905,0.93,1.0"
+  },
+  "groups": [
+    {
+      "name": "Friendly fold",
+      "layers": [
+        {
+          "image-name": "friendly.svg",
+          "name": "Friendly fold"
+        }
+      ],
+      "specular": false,
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0
+      },
+      "translucency": {
+        "enabled": false,
+        "value": 0
+      }
+    },
+    {
+      "name": "04 \u00b7 Folded lip",
+      "layers": [
+        {
+          "image-name": "07-folder-fold.svg",
+          "name": "04 \u00b7 Folded lip"
+        }
+      ],
+      "blur-material": 0.12,
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.85,
+        "depth": 0.32
+      },
+      "specular": "inside",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.24
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.8
+      }
+    },
+    {
+      "name": "03 \u00b7 Frosted cover",
+      "layers": [
+        {
+          "image-name": "06-folder-front.svg",
+          "name": "03 \u00b7 Frosted cover"
+        }
+      ],
+      "blur-material": 0.12,
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.85,
+        "depth": 0.32
+      },
+      "specular": "inside",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.24
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.92
+      }
+    },
+    {
+      "name": "02 \u00b7 File leaf",
+      "layers": [
+        {
+          "image-name": "05-folder-sheet.svg",
+          "name": "02 \u00b7 File leaf"
+        },
+        {
+          "image-name": "04-folder-back.svg",
+          "name": "01 \u00b7 Folder back"
+        }
+      ],
+      "blur-material": 0.12,
+      "refractivity": {
+        "enabled": true,
+        "strength": 0.85,
+        "depth": 0.32
+      },
+      "specular": "inside",
+      "shadow": {
+        "kind": "neutral",
+        "opacity": 0.24
+      },
+      "translucency": {
+        "enabled": true,
+        "value": 0.8
+      }
+    }
+  ],
+  "supported-platforms": {
+    "squares": "shared"
+  }
+}

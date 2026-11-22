@@ -1,0 +1,124 @@
+{
+  "features" : [
+    "refractivity",
+    "specular-location"
+  ],
+  "fill" : {
+    "automatic-gradient" : "extended-srgb:0.89000,0.90500,0.93000,1.00000"
+  },
+  "groups" : [
+    {
+      "blur-material" : 0.12,
+      "layers" : [
+        {
+          "image-name" : "07-folder-fold.svg",
+          "name" : "04 · Folded lip",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              4,
+              0
+            ]
+          }
+        }
+      ],
+      "name" : "04 · Folded lip",
+      "refractivity" : {
+        "depth" : 0.32,
+        "enabled" : true,
+        "strength" : 0.85
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.24
+      },
+      "specular" : "inside",
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.8
+      }
+    },
+    {
+      "blur-material" : 0.12,
+      "layers" : [
+        {
+          "image-name" : "06-folder-front.svg",
+          "name" : "03 · Frosted cover",
+          "position" : {
+            "scale" : 1,
+            "translation-in-points" : [
+              5.4940319951629135,
+              -17
+            ]
+          }
+        }
+      ],
+      "name" : "03 · Frosted cover",
+      "refractivity" : {
+        "depth" : 0.32,
+        "enabled" : true,
+        "strength" : 0.85
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.24
+      },
+      "specular" : "inside",
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.92
+      }
+    },
+    {
+      "blur-material" : 0.12,
+      "layers" : [
+        {
+          "image-name" : "05-folder-sheet.svg",
+          "name" : "02 · File leaf"
+        }
+      ],
+      "name" : "02 · File leaf",
+      "refractivity" : {
+        "depth" : 0.32,
+        "enabled" : true,
+        "strength" : 0.85
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.24
+      },
+      "specular" : "inside",
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.8
+      }
+    },
+    {
+      "blur-material" : 0.12,
+      "layers" : [
+        {
+          "image-name" : "04-folder-back.svg",
+          "name" : "01 · Folder back"
+        }
+      ],
+      "name" : "01 · Folder back",
+      "refractivity" : {
+        "depth" : 0.32,
+        "enabled" : true,
+        "strength" : 0.85
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.24
+      },
+      "specular" : "inside",
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.8
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "squares" : "shared"
+  }
+}

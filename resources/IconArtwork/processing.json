@@ -1,0 +1,34 @@
+{
+  "light": {
+    "source_bounds": [
+      85,
+      110,
+      866,
+      703
+    ],
+    "artwork_size": [
+      832,
+      632
+    ],
+    "position": [
+      96,
+      196
+    ]
+  },
+  "dark": {
+    "source_bounds": [
+      69,
+      176,
+      850,
+      769
+    ],
+    "artwork_size": [
+      832,
+      632
+    ],
+    "position": [
+      96,
+      196
+    ]
+  }
+}

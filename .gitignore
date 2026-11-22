@@ -1,0 +1,13 @@
+.DS_Store
+.build/
+.swiftpm/
+DerivedData/
+work/
+.impeccable/review/
+outputs/releases/
+outputs/*.zip
+*.dmg
+*.xcuserstate
+xcuserdata/
+__pycache__/
+*.py[cod]
