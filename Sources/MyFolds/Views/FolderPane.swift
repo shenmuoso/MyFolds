@@ -40,7 +40,7 @@ struct FolderPane: View {
         .background((scheme == .dark ? Color(white: 0.12) : Color(red: 0.945, green: 0.941, blue: 0.929)).opacity(model.preferences.increaseContrast ? 0.6 : 0.14))
         .onDrop(of: [.fileURL], isTargeted: nil) { providers in
             guard session.archive == nil && !session.loading && !session.isInTrash else { return false }
-            model.receiveDrop(providers, to: session.directory); return true
+            return model.receiveDrop(providers, to: session) != nil
         }
     }
     @ViewBuilder private var content: some View {

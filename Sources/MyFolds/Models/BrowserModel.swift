@@ -123,7 +123,7 @@ final class BrowserModel {
             do {
                 let item = try await directoryService.item(at: url)
                 try Task.checkCancellation()
-                if item.isDirectory { target.navigate(url, hidden: preferences.showHidden) }
+                if item.isDirectory { target.navigate(item.directoryTarget ?? url, hidden: preferences.showHidden) }
                 else {
                     target.navigate(url.deletingLastPathComponent(), hidden: preferences.showHidden)
                     target.selection = [url.standardizedFileURL]
@@ -309,7 +309,7 @@ final class BrowserModel {
     func open(_ item: FileItem, session: FolderSession? = nil) {
         let target = session ?? active
         if item.isDirectory {
-            target.navigate(item.url, hidden: preferences.showHidden); saveSession()
+            target.navigate(item.directoryTarget ?? item.url, hidden: preferences.showHidden); saveSession()
         } else if preferences.openingDestination(for: item) == .system { openExternally(item, useSystemDefault: true) }
         else if preferences.applicationPath(for: item) != nil { openExternally(item) }
         else if item.url.pathExtension.lowercased() == "dmg" { mountImage(item.url, session: target) }
@@ -370,7 +370,7 @@ final class BrowserModel {
                 let item = try await quickAccess.resolve(entry)
                 try Task.checkCancellation()
                 guard target.navigationRequest == request else { return }
-                if item.isDirectory { target.navigate(item.url, hidden: preferences.showHidden); saveSession() }
+                if item.isDirectory { target.navigate(item.directoryTarget ?? item.url, hidden: preferences.showHidden); saveSession() }
                 else { open(item, session: target) }
             } catch is CancellationError { }
             catch { message = "快速访问项目不可用：\(entry.name)\n\(error.localizedDescription)" }

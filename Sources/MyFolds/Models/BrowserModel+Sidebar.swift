@@ -13,13 +13,13 @@ extension BrowserModel {
                 switch target {
                 case .current: open(item, session: original)
                 case .newTab:
-                    addTab(isRight: originalRight, directory: item.isDirectory ? item.url : item.url.deletingLastPathComponent())
+                    addTab(isRight: originalRight, directory: item.directoryTarget ?? item.url.deletingLastPathComponent())
                     if !item.isDirectory { active.selection = [item.url] }
                 case .otherPane:
                     if !split { toggleSplit() }
                     rightActive = !originalRight
                     let destination = active
-                    destination.navigate(item.isDirectory ? item.url : item.url.deletingLastPathComponent(), hidden: preferences.showHidden)
+                    destination.navigate(item.directoryTarget ?? item.url.deletingLastPathComponent(), hidden: preferences.showHidden)
                     if !item.isDirectory { destination.selection = [item.url] }
                     saveSession()
                 }

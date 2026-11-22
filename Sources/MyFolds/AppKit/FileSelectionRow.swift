@@ -16,6 +16,11 @@ final class FileSelectionRow: NSTableRowView {
             cell.textField?.textColor = isSelected && isEmphasized ? selectionPalette.foreground : cell.identifier?.rawValue == "name" ? .labelColor : .secondaryLabelColor
         }
     }
+    override func drawDraggingDestinationFeedback(in dirtyRect: NSRect) {
+        let path = NSBezierPath(roundedRect: bounds.insetBy(dx: 1, dy: 1), xRadius: 6, yRadius: 6)
+        selectionPalette.background.withAlphaComponent(0.18).setFill(); path.fill()
+        selectionPalette.background.setStroke(); path.lineWidth = 1.5; path.stroke()
+    }
     override func drawSelection(in dirtyRect: NSRect) {
         guard let table else { return }
         let row = table.row(for: self)

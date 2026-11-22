@@ -28,6 +28,7 @@ struct NativeFileTable: NSViewRepresentable {
         }
         table.delegate = context.coordinator; table.dataSource = context.coordinator
         table.target = context.coordinator; table.doubleAction = #selector(Coordinator.openItem)
+        table.registerForDraggedTypes([.fileURL])
         table.setDraggingSourceOperationMask(.copy, forLocal: false)
         table.setDraggingSourceOperationMask(.copy, forLocal: true)
         table.previewAction = model.quickLook; table.renameAction = { model.requestName(rename: true) }
@@ -127,6 +128,23 @@ struct NativeFileTable: NSViewRepresentable {
             parent.session.sort = key; parent.session.ascending = descriptor.ascending
         }
         func tableView(_ tableView: NSTableView, pasteboardWriterForRow row: Int) -> (any NSPasteboardWriting)? { cachedItems.indices.contains(row) ? cachedItems[row].url as NSURL : nil }
+        private func dropDestination(row: Int, operation: NSTableView.DropOperation) -> URL? {
+            guard !parent.model.busy, !parent.session.loading, parent.session.archive == nil, !parent.session.isInTrash else { return nil }
+            if operation == .on && cachedItems.indices.contains(row) { return cachedItems[row].directoryTarget }
+            return parent.session.directory
+        }
+        func tableView(_ tableView: NSTableView, validateDrop info: any NSDraggingInfo, proposedRow row: Int, proposedDropOperation operation: NSTableView.DropOperation) -> NSDragOperation {
+            guard info.draggingPasteboard.canReadObject(forClasses: [NSURL.self], options: [.urlReadingFileURLsOnly: true]),
+                  dropDestination(row: row, operation: operation) != nil else { return [] }
+            if operation == .on && cachedItems.indices.contains(row) { tableView.setDropRow(row, dropOperation: .on) }
+            else { tableView.setDropRow(-1, dropOperation: .on) }
+            return .copy
+        }
+        func tableView(_ tableView: NSTableView, acceptDrop info: any NSDraggingInfo, row: Int, dropOperation operation: NSTableView.DropOperation) -> Bool {
+            guard let destination = dropDestination(row: row, operation: operation),
+                  let urls = info.draggingPasteboard.readObjects(forClasses: [NSURL.self], options: [.urlReadingFileURLsOnly: true]) as? [URL], !urls.isEmpty else { return false }
+            return parent.model.receiveDrop(urls.map { NSItemProvider(object: $0 as NSURL) }, to: destination) != nil
+        }
         @objc func openItem() {
             guard let table, cachedItems.indices.contains(table.clickedRow) else { return }
             parent.model.rightActive = parent.isRight; parent.model.open(cachedItems[table.clickedRow])

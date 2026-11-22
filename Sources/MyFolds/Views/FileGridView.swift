@@ -21,11 +21,13 @@ struct FileGridView: View {
                                     .foregroundStyle(session.selection.contains(item.url) ? selectionText : Color.primary)
                                     .background(session.selection.contains(item.url) ? accent : .clear, in: .rect(cornerRadius: 4))
                                 Text(item.isDirectory ? "文件夹" : ByteCountFormatter.string(fromByteCount: item.size, countStyle: .file)).font(.caption).foregroundStyle(.secondary)
-                            }.frame(width: 124, height: 130).opacity(model.cutURLs.contains(item.url) ? 0.5 : 1)
+                            }.frame(width: 124, height: 130).contentShape(.rect)
+                                .opacity(model.cutURLs.contains(item.url) ? 0.5 : 1)
                         }
                         .buttonStyle(.plain).focusEffectDisabled()
                         .accessibilityAddTraits(session.selection.contains(item.url) ? .isSelected : [])
                         .simultaneousGesture(TapGesture(count: 2).onEnded { model.rightActive = isRight; model.open(item) })
+                        .modifier(FolderDropTarget(item: item, model: model))
                         .onDrag { NSItemProvider(object: item.url as NSURL) }
                         .anchorPreference(key: GridItemBounds.self, value: .bounds) { [item.url: $0] }
                     }
