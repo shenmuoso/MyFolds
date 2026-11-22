@@ -10,6 +10,9 @@ public enum SyntaxHighlighter {
     // UTF-16 offsets map directly to NSTextView. Strings and comments are
     // consumed as units, so keywords inside them cannot overwrite their color.
     private static func tokenize(_ input: [UInt16], language: SyntaxLanguage, offset: Int = 0) throws -> [SyntaxToken] {
+        if [.diff, .log, .ini, .dockerfile, .makefile].contains(language) {
+            return try LineSyntaxHighlighter.highlight(String(decoding: input, as: UTF16.self), language: language, offset: offset)
+        }
         let count = input.count, keywords = SyntaxKeywords.words(for: language)
         var tokens: [SyntaxToken] = [], i = 0, insideTag = false
         let hashComments: Set<SyntaxLanguage> = [.python, .shell, .yaml, .toml]

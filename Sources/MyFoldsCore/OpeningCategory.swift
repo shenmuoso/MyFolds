@@ -33,7 +33,7 @@ public enum OpeningCategory: String, CaseIterable, Identifiable, Sendable {
     }
     public var extensions: [String] {
         switch self {
-        case .text: ["txt", "log", "csv", "json", "jsonc", "yaml", "yml", "toml", "xml", "ini", "conf", "swift", "py", "js", "jsx", "ts", "tsx", "css", "scss", "less", "sh", "bash", "zsh", "fish", "java", "kt", "kts", "c", "h", "cpp", "cc", "cxx", "hpp", "hh", "cs", "go", "rs", "sql"]
+        case .text: ["txt", "log", "diff", "patch", "cfg", "properties", "env", "mk", "dockerfile", "csv", "json", "jsonc", "yaml", "yml", "toml", "xml", "ini", "conf", "swift", "py", "js", "jsx", "ts", "tsx", "css", "scss", "less", "sh", "bash", "zsh", "fish", "java", "kt", "kts", "c", "h", "cpp", "cc", "cxx", "hpp", "hh", "cs", "go", "rs", "sql"]
         case .image: ["jpg", "jpeg", "png", "heic", "gif", "webp", "tif", "tiff", "bmp", "svg", "avif", "raw"]
         case .video: ["mp4", "mov", "m4v", "mkv", "avi", "webm", "mpeg", "mpg"]
         case .audio: ["mp3", "m4a", "aac", "wav", "flac", "aiff", "ogg"]

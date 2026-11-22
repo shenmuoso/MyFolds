@@ -12,7 +12,7 @@ public enum BuiltInViewer: String, Sendable {
         if categories.contains(.video) { return .video }
         // Rich text and Office packages must not be rewritten as plain text.
         if categories.contains(.office) || ["rtf", "rtfd"].contains(file.url.pathExtension.lowercased()) { return nil }
-        if categories.contains(.text) || categories.contains(.html) { return .text }
+        if categories.contains(.text) || categories.contains(.html) || SyntaxLanguage.detect(url: file.url, text: "") != .plain { return .text }
         return nil
     }
     public var isEditable: Bool { self == .text || self == .markdown }
