@@ -36,6 +36,9 @@ struct BrowserView: View {
         }
         .onReceive(NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didMountNotification)) { _ in model.refreshVolumes() }
         .onReceive(NSWorkspace.shared.notificationCenter.publisher(for: NSWorkspace.didUnmountNotification)) { _ in model.refreshVolumes() }
+        .onChange(of: model.access.diskAccess) {
+            if !model.access.needsDiskAccess { model.showsAccessOnboarding = false; model.refreshAll() }
+        }
         .onChange(of: model.preferences.showHidden) { model.refreshAll() }
         .alert("MyFolds", isPresented: Binding(get: { model.message != nil }, set: { if !$0 { model.message = nil } })) {
             Button("好", role: .cancel) { model.message = nil }

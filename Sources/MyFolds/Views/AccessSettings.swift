@@ -9,6 +9,7 @@ struct AccessSettings: View {
                 Text("首次使用时，在系统设置中添加 MyFolds 并开启权限，统一访问桌面、文稿、下载和受保护目录。系统可能要求退出并重新打开应用。")
                     .font(.system(size: 12)).foregroundStyle(.secondary).fixedSize(horizontal: false, vertical: true)
                 Button("打开系统设置…", action: access.openFullDiskAccess)
+                Toggle("启动时提醒磁盘权限", isOn: $access.remindDiskAccessAtLaunch).toggleStyle(.checkbox)
                 Text("隐私与安全性 → 完全磁盘访问权限 → ＋ → 应用程序 → MyFolds")
                     .font(.system(size: 11)).foregroundStyle(.secondary).textSelection(.enabled)
             }

@@ -5,16 +5,18 @@ import MyFoldsCore
 
 @MainActor @Suite("Shared accent preference", .serialized)
 struct AccentPreferenceTests {
-    @Test func choicePersistsAndUnknownValueFallsBackToSystem() throws {
+    @Test func choicePersistsAndNewInstallDefaultsToGraphite() throws {
         let name = "MyFolds-Accent-" + UUID().uuidString
         let defaults = try #require(UserDefaults(suiteName: name))
         defer { defaults.removePersistentDomain(forName: name) }
         let preferences = Preferences(defaults: defaults)
-        #expect(preferences.accent == .system)
+        #expect(preferences.accent == .graphite)
+        preferences.accent = .system
+        #expect(Preferences(defaults: defaults).accent == .system)
         preferences.accent = .purple
         #expect(Preferences(defaults: defaults).accent == .purple)
         defaults.set("unknown-color", forKey: "accentColor")
-        #expect(Preferences(defaults: defaults).accent == .system)
+        #expect(Preferences(defaults: defaults).accent == .graphite)
     }
 
     @Test func everyPaletteKeepsSelectionTextReadable() throws {

@@ -31,7 +31,7 @@ final class Preferences {
         self.defaults = defaults
         let d = defaults
         appearance = d.string(forKey: "appearance") ?? "system"
-        accent = d.string(forKey: "accentColor").flatMap(AppAccent.init(rawValue:)) ?? .system
+        accent = d.string(forKey: "accentColor").flatMap(AppAccent.init(rawValue:)) ?? .graphite
         compact = d.bool(forKey: "compact")
         reduceMotion = d.bool(forKey: "reduceMotion")
         showHidden = d.bool(forKey: "showHidden")

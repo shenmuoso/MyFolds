@@ -32,6 +32,7 @@ final class BrowserModel {
     var preview: PreviewModel?
     let access: FileAccessManager
     var showsAccessOnboarding = false
+    @ObservationIgnored private var checkedStartupAccess = false
     @ObservationIgnored let directoryService = DirectoryService()
     @ObservationIgnored let diskImages = DiskImageService()
     @ObservationIgnored let volumeService = VolumeService()
@@ -80,8 +81,11 @@ final class BrowserModel {
         await access.restore()
         await access.refreshDiskAccess()
         await quickAccess.restore()
-        if !access.onboardingComplete { showsAccessOnboarding = true }
-        else { refreshAll() }
+        if !checkedStartupAccess {
+            checkedStartupAccess = true
+            showsAccessOnboarding = access.shouldPromptAtLaunch
+        }
+        refreshAll()
         while !Task.isCancelled {
             do { try await Task.sleep(for: .seconds(3)) } catch { return }
             clipboardCount = NSPasteboard.general.changeCount

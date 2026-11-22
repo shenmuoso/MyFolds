@@ -5,6 +5,14 @@ import MyFoldsCore
 @MainActor @Observable
 final class FileAccessManager {
     var onboardingComplete: Bool
+    var suppressDiskAccessReminder: Bool {
+        didSet { defaults.set(suppressDiskAccessReminder, forKey: "suppressDiskAccessReminder") }
+    }
+    var shouldPromptAtLaunch: Bool { needsDiskAccess && !suppressDiskAccessReminder }
+    var remindDiskAccessAtLaunch: Bool {
+        get { !suppressDiskAccessReminder }
+        set { suppressDiskAccessReminder = !newValue }
+    }
     var diskAccess: DiskAccessStatus = .unknown
     var needsDiskAccess: Bool { diskAccess != .available }
     @ObservationIgnored private let defaults: UserDefaults
@@ -12,6 +20,7 @@ final class FileAccessManager {
     @ObservationIgnored private var checkingAccess = false
     init(defaults: UserDefaults = .standard, probe: @escaping @Sendable () async -> DiskAccessStatus = { await DiskAccessProbe.check() }) {
         self.defaults = defaults; self.probe = probe
+        suppressDiskAccessReminder = defaults.bool(forKey: "suppressDiskAccessReminder")
         onboardingComplete = defaults.bool(forKey: "fileAccessOnboardingComplete")
     }
     func refreshDiskAccess() async {
