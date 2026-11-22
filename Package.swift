@@ -10,6 +10,6 @@ let package = Package(
         .target(name: "MyFoldsCore", dependencies: ["CArchive"]),
         .executableTarget(name: "MyFolds", dependencies: ["MyFoldsCore"]),
         .testTarget(name: "MyFoldsCoreTests", dependencies: ["MyFoldsCore", "CArchive"], resources: [.copy("Fixtures")]),
-        .testTarget(name: "MyFoldsUITests", dependencies: ["MyFolds"])
+        .testTarget(name: "MyFoldsUITests", dependencies: ["MyFolds"], resources: [.copy("Fixtures")])
     ]
 )
