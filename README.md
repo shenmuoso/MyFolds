@@ -1,41 +1,78 @@
 # MyFolds
 
-macOS 原生文件管理器。SwiftUI 界面与 AppKit 文件列表、窗口和媒体预览；底层文件操作和压缩处理独立于界面。
+中文 · [English](README.en.md)
 
-当前为 **0.1.11 内部测试版**，提供真实文件浏览、剪切/复制/粘贴、完整路径、双栏独立标签、快速访问、内置编辑与媒体查看、打开方式、DMG 挂载和压缩包操作。本版新增“偏好设置 → 文本编辑器”：行号、字体与字号、独立外观、修饰键滚轮缩放开关，以及可录入的查找/替换快捷键。编辑器支持单文件普通、转义和正则搜索，结果列表、选区范围、逐个/全部替换与撤销。HTML 确认稿保留在 `outputs/myfolds-design/`，功能范围草案不等于本构建全部完成。
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="resources/IconArtwork/myfolds-dark-1024.png">
+  <img src="resources/IconArtwork/myfolds-light-1024.png" alt="MyFolds 磨砂文件夹图标" width="112">
+</picture>
 
-## 运行与构建
+macOS 原生文件管理器，使用 SwiftUI、AppKit 和系统磨砂材质，面向日常文件整理、路径导航和文件预览。
 
-- Apple Silicon Mac，macOS 27.0 或更新系统。
-- Xcode 27.2 / Swift 6.4；无需下载 Swift 包依赖。
-- 使用 macOS 自带 libarchive。`Sources/CArchive/include/` 为上游公开头文件；许可见 `resources/ThirdPartyNotices.txt`。
+当前版本：**0.1.13**，测试阶段。支持 **Apple Silicon / macOS 27.0+**。
+
+## 功能
+
+- **文件管理**：复制、剪切、粘贴、重命名、新建文件夹、废纸篓及操作记录。
+- **路径与标签**：可编辑的完整路径、前缀补全、双栏独立标签页、批量关闭标签、跨标签拖放。
+- **快速访问**：拖入文件或文件夹添加快捷入口，支持侧栏右键菜单。
+- **内置查看器**：文本编辑、Markdown 编辑与预览、图片、视频和 PDF；其他文档使用系统 Quick Look。
+- **文本编辑器**：行号、字体、字号、独立外观、语法高亮；单文件搜索替换支持全词、正则、仅选区和结果列表。
+- **打开方式**：按扩展名或文件类别选择内置查看器或外部应用。
+- **磁盘映像与压缩包**：在应用内挂载、浏览和弹出 DMG；支持拖入 Applications 链接、压缩包浏览与解压、创建 ZIP。
+- **外观**：浅色、深色、跟随系统和可选强调色；首次安装默认石墨色。
+
+支持范围和版本记录见 [原生测试版说明](原生测试版说明.md)。
+
+## 构建与安装
+
+需要 Xcode 27.2 / Swift 6.4。无第三方 Swift 包依赖，压缩处理使用系统 libarchive。
 
 ```bash
-swift test
+git clone git@github.com:shenmuoso/MyFolds.git
+cd MyFolds
+
+# 测试
+swift test --configuration release
+
+# 调试应用
 bash scripts/build-app.sh debug
+
+# 发布应用和 DMG
 bash scripts/package-dmg.sh
 ```
 
-调试应用：`.build/Preview/MyFolds.app`。
-发布应用：`.build/Release.noindex/MyFolds.app`；DMG：`outputs/releases/`。
-发布应用使用不索引的构建目录，避免系统启动列表把它与 `/Applications` 中的安装版重复登记。
+| 产物 | 位置 |
+| --- | --- |
+| 调试应用 | `.build/Preview/MyFolds.app` |
+| 发布应用 | `.build/Release.noindex/MyFolds.app` |
+| 安装镜像 | `outputs/releases/MyFolds-0.1.13-arm64.dmg` |
 
-调试包显示为 `MyFolds Preview`，使用独立标识 `com.myfolds.app.preview`，避免系统 App 列表把预览版与安装版合并。调试偏好与安装版分开保存。
+打开生成的 DMG，将 MyFolds 拖入 Applications。调试版使用独立的应用标识及偏好设置，不会覆盖安装版设置。
 
-本机旧版备份保存在 `work/app-backups.noindex/`，扩展名为 `.app-backup`，不作为可启动应用登记。需要恢复时先复制到临时位置，再将扩展名改回 `.app`；不要直接在工作目录堆放同标识的旧 `.app` 包。2026-11-22 的迁移路径与内容哈希见 `work/app-list-repair-2026-11-22/backup-moves.json`。
+当前构建使用 ad-hoc 签名，尚未进行 Developer ID 签名及 Apple 公证。DMG 和本机构建文件不纳入 Git。
 
-DMG 使用本地 ad-hoc 签名，尚无 Developer ID 签名与 Apple 公证。它供当前阶段本机测试，不是公开分发包。
+## 文件访问权限
 
-## 文件组织
+访问受保护目录需要在“系统设置 → 隐私与安全性 → 完全磁盘访问权限”中启用 MyFolds。应用会在需要时提供引导，可勾选“下次不再提醒”；也可在“偏好设置 → 文件访问”恢复提醒。
 
-- `Sources/MyFolds/`：原生界面、窗口桥接、浏览状态及偏好。
-- `Sources/MyFoldsCore/`：文件系统、校验、撤销记录、压缩包读写。
-- `Tests/MyFoldsCoreTests/`：真实临时文件操作与格式、安全边界测试。
-- `Tests/MyFoldsUITests/`：打开规则、导航、编辑器、外观与窗口材质回归。
-- `resources/IconArtwork/`：用户截图、去底并对齐的 1024 px 母版及处理记录；可由 `scripts/prepare-icon-artwork.py` 重建。
-- `resources/MyFoldsFolder.icon`：当前图标源文件；用户图稿保留原有光影，macOS 提供系统容器与外观。旧 `MyFoldsIcon.icon` 不再参与构建。
-- `scripts/build-icons.sh`：由当前图标源文件生成 `Assets.car`、兼容 ICNS、图标元数据及浅深色品牌图；系统、应用内与 Dock 共用同一图稿。
-- `scripts/`：图标、应用包及 DMG 的可复现构建脚本。
-- `outputs/myfolds-design/`：此前确认的交互设计，使用示例数据。
+## 项目结构
 
-具体覆盖范围与限制见 [原生测试版说明](原生测试版说明.md)。
+| 目录 | 内容 |
+| --- | --- |
+| `Sources/MyFolds/` | SwiftUI 界面、AppKit 桥接、窗口和应用状态 |
+| `Sources/MyFoldsCore/` | 文件系统、压缩处理、文本搜索与语法解析 |
+| `Tests/` | 文件操作、编辑器、窗口生命周期和导航回归测试 |
+| `resources/` | 应用信息、图标源文件及第三方许可 |
+| `scripts/` | 图标生成、应用构建和 DMG 打包 |
+| `outputs/myfolds-design/` | 使用示例数据的历史交互原型 |
+
+## 作者与相关项目
+
+作者：[shenmuoso](https://github.com/shenmuoso) · [项目地址](https://github.com/shenmuoso/MyFolds) · [反馈问题](https://github.com/shenmuoso/MyFolds/issues)
+
+推荐作者的另一个项目：[mac-scope](https://github.com/shenmuoso/mac-scope)，用于 macOS 资源管理、监控与系统清理。
+
+## 许可
+
+[MIT](LICENSE)。libarchive 头文件许可见 [ThirdPartyNotices](resources/ThirdPartyNotices.txt)。
