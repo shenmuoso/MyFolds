@@ -44,6 +44,7 @@ final class BrowserModel {
     @ObservationIgnored var materialProbe: NSWindow?
     #endif
     @ObservationIgnored var settingsWindow: NSWindow?
+    @ObservationIgnored var aboutWindow: NSWindow?
     @ObservationIgnored var previewDelegate: PreviewWindowDelegate?
     @ObservationIgnored var previewWindow: NSWindow?
     @ObservationIgnored var operation: Task<Void, Never>?

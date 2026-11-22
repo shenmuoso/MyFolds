@@ -5,18 +5,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     static weak var browser: BrowserModel?
     private var terminating = false
     static func showAbout() {
-        let appearance: NSAppearance
-        switch browser?.preferences.appearance {
-        case "dark": appearance = NSAppearance(named: .darkAqua)!
-        case "light": appearance = NSAppearance(named: .aqua)!
-        default: appearance = NSApp.effectiveAppearance
-        }
-        let dark = appearance.bestMatch(from: [.aqua, .darkAqua]) == .darkAqua
-        let icon = AppIconProvider.resolvedImage(dark: dark) ?? AppIconProvider.image
-        appearance.performAsCurrentDrawingAppearance {
-            NSApp.orderFrontStandardAboutPanel(options: [.applicationIcon: icon])
-        }
-        NSApp.keyWindow?.appearance = appearance
+        browser?.openAbout()
     }
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
         guard let browser = Self.browser, browser.documentWindows.values.contains(where: { $0.state.document?.dirty == true }) else { return .terminateNow }

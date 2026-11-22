@@ -18,11 +18,17 @@ struct SettingsView: View {
                     settingTab("文件访问", symbol: "lock.shield")
                 }.padding(.horizontal, 10).padding(.top, 8)
                 Spacer()
-                HStack(spacing: 7) {
-                    Image(AppIconProvider.assetName, bundle: .main).resizable().frame(width: 20, height: 20)
-                    Text("MyFolds").font(.system(size: 12)).foregroundStyle(.secondary)
-                    Spacer()
-                }.padding(18)
+                Button(action: AppDelegate.showAbout) {
+                    HStack(spacing: 8) {
+                        Image(AppIconProvider.assetName, bundle: .main).resizable().frame(width: 24, height: 24)
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text("MyFolds").font(.system(size: 12))
+                            Text(AppInformation.version).font(.system(size: 11)).foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                    }.contentShape(.rect)
+                }.buttonStyle(.plain).help("关于 MyFolds")
+                    .accessibilityLabel("关于 MyFolds，版本 \(AppInformation.version)").padding(18)
             }.frame(width: 190).background(Color.white.opacity(0.035))
             VStack(alignment: .leading, spacing: 0) {
                 Text(preferences.settingsSection).font(.system(size: 16, weight: .semibold)).padding(.horizontal, 24).frame(maxWidth: .infinity, minHeight: 52, alignment: .leading)
