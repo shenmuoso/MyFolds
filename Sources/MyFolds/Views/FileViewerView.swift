@@ -39,7 +39,8 @@ struct FileViewerView: View {
                 if document.loading { ProgressView("正在读取文稿…").frame(maxWidth: .infinity, maxHeight: .infinity) }
                 else if document.revision != nil {
                     if document.search.visible { EditorSearchBar(search: document.search).transition(.opacity) }
-                    HStack(spacing: 0) {
+                    EditorContentSplit(search: document.search) {
+                      HStack(spacing: 0) {
                         if state.kind == .text || state.markdownMode != "preview" {
                             NativeTextEditor(document: document, preferences: preferences).frame(maxWidth: .infinity).transition(.opacity)
                         }
@@ -48,7 +49,7 @@ struct FileViewerView: View {
                             MarkdownPreview(text: document.text, url: state.item.url).frame(maxWidth: .infinity).transition(.opacity)
                         }
                     }.animation(BrowserMotion.content(reduced), value: state.markdownMode)
-                    if document.search.visible && document.search.showsResults { EditorSearchResults(search: document.search) }
+                    }
                     EditorStatusBar(document: document, preferences: preferences)
                 }
                 if let error = document.error {

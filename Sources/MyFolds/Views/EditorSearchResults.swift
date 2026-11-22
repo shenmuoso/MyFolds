@@ -25,6 +25,6 @@ struct EditorSearchResults: View {
                     }
                 }.padding(.horizontal, 8)
             }
-        }.font(.system(size: 11)).frame(height: 175).background(.primary.opacity(0.035))
+        }.font(.system(size: 11)).background(.primary.opacity(0.035))
     }
 }

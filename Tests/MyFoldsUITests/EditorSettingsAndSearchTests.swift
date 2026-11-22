@@ -189,6 +189,17 @@ struct EditorSettingsAndSearchTests {
         document.search.query = "apple"
         try await wait { document.search.ready }
         document.search.showsResults = true
+        try await wait { findDivider(window.contentView) != nil }
+        let divider = try #require(findDivider(window.contentView))
+        let editor = try #require(findScroll(window.contentView))
+        let originalHeight = editor.frame.height
+        divider.resize(to: 260)
+        try await wait { divider.height == 260 }
+        window.contentView?.layoutSubtreeIfNeeded()
+        #expect(editor.frame.height < originalHeight)
+        divider.resize(to: -100)
+        try await wait { divider.height == 80 }
+        #expect(findScroll(window.contentView) === editor)
         document.search.replacement = "pear"; document.search.replace(all: true)
         try await wait { document.text.contains("pear") }
         window.contentView?.layoutSubtreeIfNeeded()
@@ -197,6 +208,11 @@ struct EditorSettingsAndSearchTests {
         window.setContentSize(NSSize(width: 620, height: 420))
         window.contentView?.layoutSubtreeIfNeeded()
         #expect(window.frame.width == 620)
+    }
+    private func findDivider(_ view: NSView?) -> EditorResultsDividerView? {
+        guard let view else { return nil }
+        if let divider = view as? EditorResultsDividerView { return divider }
+        return view.subviews.lazy.compactMap { findDivider($0) }.first
     }
     private func findSearchField(_ view: NSView?) -> EditorSearchTextField? {
         guard let view else { return nil }
