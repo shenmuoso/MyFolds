@@ -4,6 +4,7 @@ import MyFoldsCore
 final class EditorLineNumberRuler: NSRulerView {
     var lineIndex = TextLineIndex()
     private var numberFont = NSFont.monospacedDigitSystemFont(ofSize: 11, weight: .regular)
+    private var lastFontSize: Double?
     override var isFlipped: Bool { true }
     override var isOpaque: Bool { false }
     override func draw(_ dirtyRect: NSRect) {
@@ -13,7 +14,11 @@ final class EditorLineNumberRuler: NSRulerView {
         NSGraphicsContext.restoreGraphicsState()
     }
     func update(index: TextLineIndex, fontSize: Double) {
+        let changed = lineIndex.starts.count != index.starts.count || lastFontSize != fontSize
         lineIndex = index
+        needsDisplay = true
+        guard changed else { return }
+        lastFontSize = fontSize
         numberFont = .monospacedDigitSystemFont(ofSize: min(14, max(9, fontSize - 2)), weight: .regular)
         let digits = max(3, String(index.starts.count).count)
         ruleThickness = ceil((String(repeating: "8", count: digits) as NSString).size(withAttributes: [.font: numberFont]).width) + 24
@@ -22,7 +27,7 @@ final class EditorLineNumberRuler: NSRulerView {
     override func drawHashMarksAndLabels(in rect: NSRect) {
         guard let text = clientView as? NSTextView, let layout = text.layoutManager, let container = text.textContainer else { return }
         NSColor.labelColor.withAlphaComponent(0.025).setFill(); bounds.fill()
-        let length = (text.string as NSString).length
+        let length = text.textStorage?.length ?? 0
         let glyphs = layout.glyphRange(forBoundingRect: text.visibleRect.offsetBy(dx: -text.textContainerOrigin.x, dy: -text.textContainerOrigin.y), in: container)
         let visible = layout.characterRange(forGlyphRange: glyphs, actualGlyphRange: nil)
         let first = lineIndex.line(at: visible.location)

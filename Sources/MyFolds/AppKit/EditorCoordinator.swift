@@ -9,12 +9,35 @@ final class EditorCoordinator: NSObject, NSTextViewDelegate {
     var dark = false
     let highlighting = TextHighlightController()
     private(set) var lineIndex = TextLineIndex()
+    private var requestedFont: NSFont?
+    private var fontTask: Task<Void, Never>?
+    private var fontGeneration = UUID()
     private var indexTask: Task<Void, Never>?
     private var indexGeneration = UUID()
     init(document: TextDocumentSession, preferences: Preferences) { self.document = document; self.preferences = preferences }
-    func cancel() { highlighting.cancel(); indexTask?.cancel(); document.search.detach() }
+    func cancel() { highlighting.cancel(); indexTask?.cancel(); fontTask?.cancel(); document.search.detach() }
+    func applyFont(_ font: NSFont, to view: EditorTextView) {
+        guard requestedFont != font else { return }
+        requestedFont = font
+        fontTask?.cancel()
+        guard view.font != font else { return }
+        let request = UUID(); fontGeneration = request
+        fontTask = Task { [weak self, weak view] in
+            // Coalesce repeated wheel/stepper updates before invalidating layout.
+            await Task.yield()
+            guard !Task.isCancelled, let self, fontGeneration == request, let view else { return }
+            let selection = view.selectedRanges
+            view.font = font
+            view.typingAttributes = [.foregroundColor: NSColor.labelColor, .font: font]
+            if view.selectedRanges != selection { view.selectedRanges = selection }
+            (view.enclosingScrollView?.verticalRulerView as? EditorLineNumberRuler)?.update(index: lineIndex, fontSize: font.pointSize)
+            highlighting.redraw(force: true)
+            document.search.redrawHighlights(force: true)
+        }
+    }
     func textDidChange(_ notification: Notification) {
         guard let text = notification.object as? EditorTextView else { return }
+        guard document.text != text.string else { return }
         document.text = text.string
         document.search.contentChanged()
         highlighting.invalidate()

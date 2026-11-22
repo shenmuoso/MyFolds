@@ -21,6 +21,8 @@ struct NativeTextEditor: NSViewRepresentable {
         text.autoresizingMask = [.width]; text.textContainer?.widthTracksTextView = true
         text.textContainer?.containerSize = NSSize(width: 0, height: CGFloat.greatestFiniteMagnitude)
         text.minSize = .zero; text.maxSize = NSSize(width: CGFloat.greatestFiniteMagnitude, height: CGFloat.greatestFiniteMagnitude)
+        text.layoutManager?.allowsNonContiguousLayout = true
+        text.layoutManager?.backgroundLayoutEnabled = false
         text.delegate = context.coordinator; text.string = document.text
         text.setSelectedRange(NSRange(location: 0, length: 0))
         text.setAccessibilityLabel("文稿内容")
@@ -33,7 +35,10 @@ struct NativeTextEditor: NSViewRepresentable {
             guard let document, let preferences else { return }
             document.fontSizeOverride = min(72, max(8, (document.fontSizeOverride ?? preferences.editor.fontSize) + delta))
         }
-        scroll.onViewportChange = { [weak document] in document?.search.redrawHighlights() }
+        scroll.onViewportChange = { [weak document, weak coordinator = context.coordinator] in
+            document?.search.redrawHighlights()
+            coordinator?.highlighting.redraw()
+        }
         context.coordinator.token = document.reloadToken
         context.coordinator.dark = scheme == .dark
         context.coordinator.refreshLines(text)
@@ -43,14 +48,10 @@ struct NativeTextEditor: NSViewRepresentable {
     func updateNSView(_ scroll: EditorScrollView, context: Context) {
         guard let text = scroll.documentView as? EditorTextView else { return }
         let font = preferences.editor.font(size: document.fontSizeOverride)
-        if text.font != font {
-            let selection = text.selectedRanges
-            text.font = font; text.selectedRanges = selection
-        }
+        context.coordinator.applyFont(font, to: text)
         text.insertionPointColor = .labelColor
-        text.typingAttributes = [.foregroundColor: NSColor.labelColor, .font: font]
         scroll.zoomEnabled = preferences.editor.scrollToZoom
-        scroll.rulersVisible = preferences.editor.showLineNumbers
+        if scroll.rulersVisible != preferences.editor.showLineNumbers { scroll.rulersVisible = preferences.editor.showLineNumbers }
         (scroll.verticalRulerView as? EditorLineNumberRuler)?.update(index: context.coordinator.lineIndex, fontSize: font.pointSize)
         context.coordinator.dark = scheme == .dark
         if context.coordinator.token != document.reloadToken {

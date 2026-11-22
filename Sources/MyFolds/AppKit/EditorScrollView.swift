@@ -4,6 +4,7 @@ final class EditorScrollView: NSScrollView {
     var zoomEnabled = true
     var onZoom: ((Double) -> Void)?
     var onViewportChange: (() -> Void)?
+    private var viewportRefreshPending = false
     private var accumulatedScroll = 0.0
     override func scrollWheel(with event: NSEvent) {
         guard zoomEnabled, !event.modifierFlags.intersection([.command, .control]).isEmpty else {
@@ -17,6 +18,12 @@ final class EditorScrollView: NSScrollView {
     override func reflectScrolledClipView(_ clipView: NSClipView) {
         super.reflectScrolledClipView(clipView)
         verticalRulerView?.needsDisplay = true
-        onViewportChange?()
+        guard !viewportRefreshPending else { return }
+        viewportRefreshPending = true
+        DispatchQueue.main.async { [weak self] in
+            guard let self else { return }
+            viewportRefreshPending = false
+            onViewportChange?()
+        }
     }
 }
